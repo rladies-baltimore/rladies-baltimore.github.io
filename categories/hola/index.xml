@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hola on R-Ladies Baltimore</title>
+    <link>/categories/hola/</link>
+    <description>Recent content in hola on R-Ladies Baltimore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
+    <lastBuildDate>Thu, 04 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/hola/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>test</title>
+      <link>/post/test/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/test/</guid>
+      <description>Note: for an event make sure that the tags and categories are like this in the YAML front matter
+tags: - event - talk categories: - event - talk Come out to our MONTH event to hear talks from XX great R Ladies!
+Describe event briefly
+Visit our Meetup page for more details and to RSVP.
+Date: Weekday, Month 00, 201X
+Time: X:YYpm
+Speakers: XX and ZZ.
+Host: WW</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>talk on R-Ladies Baltimore</title>
+    <link>http://rladies-baltimore.github.io/categories/talk/</link>
+    <description>Recent content in talk on R-Ladies Baltimore</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
+    <lastBuildDate>Thu, 04 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://rladies-baltimore.github.io/categories/talk/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Using R in Industry</title>
+      <link>http://rladies-baltimore.github.io/post/2018-10-04-using-r-in-industry/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://rladies-baltimore.github.io/post/2018-10-04-using-r-in-industry/</guid>
+      <description>&lt;p&gt;Come out to our November event to hear talks from three great R Ladies!&lt;/p&gt;
+&lt;p&gt;This meeting will highlight local Baltimore R-Ladies analyzing data in industry. It will include presentations from three speakers to discuss how they use R in their jobs and examples of projects they work on!&lt;/p&gt;
+&lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254235117/&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
+&lt;p&gt;Date: Wednesday, November 14, 2018&lt;/p&gt;
+&lt;p&gt;Time: 12:00pm&lt;/p&gt;
+&lt;p&gt;Speakers: Coming soon!&lt;/p&gt;
+&lt;p&gt;Host: Coming soon!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
