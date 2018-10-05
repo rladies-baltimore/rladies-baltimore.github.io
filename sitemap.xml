@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>http://rladies-baltimore.github.io/post/r-packages-for-scraping-data-from-the-web/</loc>
+      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>http://rladies-baltimore.github.io/post/2018-10-04-using-r-in-industry/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
     </url>
@@ -69,17 +77,8 @@
     
     <url>
     
-      <loc>http://rladies-baltimore.github.io/categories/event/</loc>
-      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>http://rladies-baltimore.github.io/tags/event/</loc>
-      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -87,8 +86,8 @@
     
     <url>
     
-      <loc>http://rladies-baltimore.github.io/categories/talk/</loc>
-      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <loc>http://rladies-baltimore.github.io/categories/event/</loc>
+      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -97,7 +96,16 @@
     <url>
     
       <loc>http://rladies-baltimore.github.io/tags/talk/</loc>
-      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>http://rladies-baltimore.github.io/categories/talk/</loc>
+      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
