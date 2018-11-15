@@ -7,25 +7,78 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
-    <lastBuildDate>Thu, 04 Oct 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 14 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://rladies-baltimore.github.io/tags/blog/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>test</title>
-      <link>/post/test/</link>
-      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      <title>Making Holiday Cards in R 2018</title>
+      <link>/post/making-holiday-cards-in-r-2018/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/test/</guid>
-      <description>Note: for an event make sure that the tags and categories are like this in the YAML front matter
-tags: - event - talk categories: - event - talk Come out to our MONTH event to hear talks from XX great R Ladies!
-Describe event briefly
-Visit our Meetup page for more details and to RSVP.
-Date: Weekday, Month 00, 201X
-Time: X:YYpm
-Speakers: XX and ZZ.
-Host: WW</description>
+      <guid>/post/making-holiday-cards-in-r-2018/</guid>
+      <description>
+
+
+&lt;p&gt;With the holiday season coming up, we want our first
+R-Ladies Baltimore coding project in R to be get into
+small groups and create holiday designs in R. Here are
+a few examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Happy Holidays from
+&lt;a href=&#34;https://twitter.com/rafalab/status/944217408033746944&#34;&gt;Rafael Irizarry&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The main part of the code looks like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;N &amp;lt;- 120
+par(bg=&amp;quot;black&amp;quot;)
+h &amp;lt;- rep(c(2:4,7),N/3)
+h[sample(N,N/5)] &amp;lt;- 0
+plot((-2)^as.complex(seq(1,49,len=100)^0.5),
+        pch=21,bg=h,xlab=&amp;quot;&amp;quot;, ylab=&amp;quot;&amp;quot;, xaxt=&amp;quot;n&amp;quot;,yaxt=&amp;quot;n&amp;quot;, cex=1.5)
+text(-25,50,&amp;quot;Happy Holidays!&amp;quot;,cex=2,col=ifelse(h%%2,&amp;quot;white&amp;quot;,&amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.r-bloggers.com/make-a-christmas-tree-in-r-with-random-ornamentspresents/&#34;&gt;Make a Christmas Tree in R with random ornaments/presents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Make the canvas
+plot(1:10,1:10,xlim=c(-5,5),ylim=c(0,10),type=&amp;quot;n&amp;quot;,xlab=&amp;quot;&amp;quot;,ylab=&amp;quot;&amp;quot;,xaxt=&amp;quot;n&amp;quot;,yaxt=&amp;quot;n&amp;quot;)
+# Make the branches
+rect(-1,0,1,2,col=&amp;quot;tan3&amp;quot;,border=&amp;quot;tan4&amp;quot;,lwd=3)
+polygon(c(-5,0,5),c(2,4,2),col=&amp;quot;palegreen3&amp;quot;,border=&amp;quot;palegreen4&amp;quot;,lwd=3)
+polygon(c(-4,0,4),c(3.5,5.5,3.5),col=&amp;quot;palegreen4&amp;quot;,border=&amp;quot;palegreen3&amp;quot;,lwd=3)
+polygon(c(-3,0,3),c(5,6.5,5),col=&amp;quot;palegreen3&amp;quot;,border=&amp;quot;palegreen4&amp;quot;,lwd=3)
+polygon(c(-2,0,2),c(6.25,7.5,6.25),col=&amp;quot;palegreen4&amp;quot;,border=&amp;quot;palegreen3&amp;quot;,lwd=3)
+
+#Add some ornaments
+points(x=runif(4,-5,5),y=rep(2,4),col=sample(c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;),size=4,replace=T),cex=3,pch=19)
+points(x=runif(4,-4,4),y=rep(3.5,4),col=sample(c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;),size=4,replace=T),cex=3,pch=19)
+points(x=runif(4,-3,3),y=rep(5,4),col=sample(c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;),size=4,replace=T),cex=3,pch=19)
+points(x=runif(4,-2,2),y=rep(6.25,4),col=sample(c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;),size=4,replace=T),cex=3,pch=19)
+points(0,7.5,pch=8,cex=5,col=&amp;quot;gold&amp;quot;,lwd=3)
+
+# Add some presents
+xPres = runif(10,-4.5,4.5)
+xWidth = runif(10,0.1,0.5)
+xHeight=runif(10,0,1)
+for(i in 1:10){
+  rect(xPres[i]-xWidth[i],0,xPres[i]+xWidth[i],xHeight[i],col=sample(c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;),size=1))
+  rect(xPres[i]-0.2*xWidth[i],0,xPres[i]+0.2*xWidth[i],xHeight[i],col=sample(c(&amp;quot;gold&amp;quot;,&amp;quot;grey87&amp;quot;),size=1))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;goal-for-the-next-hour&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Goal for the next hour&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Introduce yourself to your neighbor and find a group of people that you want to work with&lt;/li&gt;
+&lt;li&gt;Open up R&lt;/li&gt;
+&lt;li&gt;Your group can either work through the code that’s provided (great for beginners in R!) or if you want to challenge yourself, create your own holiday design! If you’re feeling really crazy, try making a shiny app. :D&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You can then use the image as a holiday card design to
+send to your family and friends this holiday season.
+From 12:50-1pm we will start presentations and ask anyone
+who’s interested in discussing their design and talking
+through how they created it.&lt;/p&gt;
+&lt;p&gt;Submit code and images of holiday designs to the #meetup-events channel the R-Ladies Baltimore Slack.&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>

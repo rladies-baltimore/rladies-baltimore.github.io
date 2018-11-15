@@ -12,6 +12,14 @@
     
     <url>
     
+      <loc>/post/making-holiday-cards-in-r-2018/</loc>
+      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/using-r-in-industry/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
     </url>
@@ -70,6 +78,24 @@
     <url>
     
       <loc>/tags/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/blog/</loc>
+      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/categories/blog/</loc>
+      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

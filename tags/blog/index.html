@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 2.4.0">
-  <meta name="generator" content="Hugo 0.49" />
+  <meta name="generator" content="Hugo 0.51" />
   <meta name="author" content="R-Ladies Baltimore">
 
   
@@ -104,7 +104,7 @@
   <meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2018-10-04T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2018-11-14T00:00:00&#43;00:00">
   
 
   
@@ -274,17 +274,12 @@
   
   
   <div>
-    <h2><a href="/post/test/">test</a></h2>
+    <h2><a href="/post/making-holiday-cards-in-r-2018/">Making Holiday Cards in R 2018</a></h2>
     <div class="article-style">
       
-      Note: for an event make sure that the tags and categories are like this in the YAML front matter
-tags: - event - talk categories: - event - talk Come out to our MONTH event to hear talks from XX great R Ladies!
-Describe event briefly
-Visit our Meetup page for more details and to RSVP.
-Date: Weekday, Month 00, 201X
-Time: X:YYpm
-Speakers: XX and ZZ.
-Host: WW
+      With the holiday season coming up, we want our first R-Ladies Baltimore coding project in R to be get into small groups and create holiday designs in R. Here are a few examples:
+ Happy Holidays from Rafael Irizarry  The main part of the code looks like this:
+N &lt;- 120 par(bg=&quot;black&quot;) h &lt;- rep(c(2:4,7),N/3) h[sample(N,N/5)] &lt;- 0 plot((-2)^as.complex(seq(1,49,len=100)^0.5), pch=21,bg=h,xlab=&quot;&quot;, ylab=&quot;&quot;, xaxt=&quot;n&quot;,yaxt=&quot;n&quot;, cex=1.5) text(-25,50,&quot;Happy Holidays!&quot;,cex=2,col=ifelse(h%%2,&quot;white&quot;,&quot;black&quot;))  Make a Christmas Tree in R with random ornaments/presents  # Make the canvas plot(1:10,1:10,xlim=c(-5,5),ylim=c(0,10),type=&quot;n&quot;,xlab=&quot;&quot;,ylab=&quot;&quot;,xaxt=&quot;n&quot;,yaxt=&quot;n&quot;) # Make the branches rect(-1,0,1,2,col=&quot;tan3&quot;,border=&quot;tan4&quot;,lwd=3) polygon(c(-5,0,5),c(2,4,2),col=&quot;palegreen3&quot;,border=&quot;palegreen4&quot;,lwd=3) polygon(c(-4,0,4),c(3.
       
     </div>
   </div>
