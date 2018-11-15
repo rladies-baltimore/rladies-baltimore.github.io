@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>talk on R-Ladies Baltimore</title>
-    <link>http://rladies-baltimore.github.io/categories/talk/</link>
+    <link>/categories/talk/</link>
     <description>Recent content in talk on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,11 +12,14 @@
     
     <item>
       <title>R packages for scraping data from the web</title>
-      <link>http://rladies-baltimore.github.io/post/r-packages-for-scraping-data-from-the-web/</link>
+      <link>/post/r-packages-for-scraping-data-from-the-web/</link>
       <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://rladies-baltimore.github.io/post/r-packages-for-scraping-data-from-the-web/</guid>
-      <description>&lt;p&gt;Come out to our January 2019 event to hear talks from XX great R Ladies!&lt;/p&gt;
+      <guid>/post/r-packages-for-scraping-data-from-the-web/</guid>
+      <description>
+
+
+&lt;p&gt;Come out to our January 2019 event to hear talks from XX great R Ladies!&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Describe event briefly&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254235977/&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
 &lt;p&gt;Date: Wednesday, January 16, 2019&lt;/p&gt;
@@ -28,11 +31,14 @@
     
     <item>
       <title>Using R in Industry</title>
-      <link>http://rladies-baltimore.github.io/post/2018-10-04-using-r-in-industry/</link>
+      <link>/post/2018-10-04-using-r-in-industry/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://rladies-baltimore.github.io/post/2018-10-04-using-r-in-industry/</guid>
-      <description>&lt;p&gt;Come out to our November event to hear talks from three great R Ladies!&lt;/p&gt;
+      <guid>/post/2018-10-04-using-r-in-industry/</guid>
+      <description>
+
+
+&lt;p&gt;Come out to our November event to hear talks from three great R Ladies!&lt;/p&gt;
 &lt;p&gt;This meeting will highlight local Baltimore R-Ladies analyzing data in industry. It will include presentations from three speakers to discuss how they use R in their jobs and examples of projects they work on!&lt;/p&gt;
 &lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254235117/&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
 &lt;p&gt;Date: Wednesday, November 14, 2018&lt;/p&gt;
