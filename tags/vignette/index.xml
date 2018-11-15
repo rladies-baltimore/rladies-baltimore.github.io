@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>event on R-Ladies Baltimore</title>
-    <link>/tags/event/</link>
-    <description>Recent content in event on R-Ladies Baltimore</description>
+    <title>vignette on R-Ladies Baltimore</title>
+    <link>/tags/vignette/</link>
+    <description>Recent content in vignette on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
     <lastBuildDate>Wed, 23 Jan 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://rladies-baltimore.github.io/tags/event/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://rladies-baltimore.github.io/tags/vignette/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>R packages for scraping data from the web</title>
@@ -26,29 +26,6 @@
 &lt;p&gt;Time: 5:30-7pm&lt;/p&gt;
 &lt;p&gt;Speakers: Coming soon!&lt;/p&gt;
 &lt;p&gt;Host: Stephanie Hicks and Margaret Taub&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Holiday Designs in R and Using R in Industry</title>
-      <link>/post/using-r-in-industry/</link>
-      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/using-r-in-industry/</guid>
-      <description>
-
-
-&lt;p&gt;Come out to our November 14th event to create your own holiday design in R to send to your friends and families this holiday season to hear a great talk!&lt;/p&gt;
-&lt;p&gt;This meeting will include a group coding event (we’re making holiday cards! :D ) and a presentation from a &lt;a href=&#34;http://underthecurve.github.io/bylines/&#34;&gt;Christine Zhang&lt;/a&gt; who works as a Data Journalist at the &lt;a href=&#34;https://twitter.com/baltimoresun&#34;&gt;Baltimore Sun&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/baltsundata&#34;&gt;Baltimore Sun Data Visualization team&lt;/a&gt; to discuss how she uses R in her jobs and examples of projects she works on!&lt;/p&gt;
-&lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254235117/&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Details on the location&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Date: Wednesday, November 14, 2018&lt;/p&gt;
-&lt;p&gt;Time: 12:00-1:30pm&lt;/p&gt;
-&lt;p&gt;Location:
-Johns Hopkins School of Public Health
-615 N. Wolfe Street
-Baltimore, MD 21205
-(Room W3008 – 3rd floor)&lt;/p&gt;
 </description>
     </item>
     

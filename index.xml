@@ -13,38 +13,42 @@
     <item>
       <title>R packages for scraping data from the web</title>
       <link>/post/r-packages-for-scraping-data-from-the-web/</link>
-      <pubDate>Fri, 05 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/r-packages-for-scraping-data-from-the-web/</guid>
       <description>
 
 
-&lt;p&gt;Come out to our January 2019 event to hear talks from XX great R Ladies!&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Describe event briefly&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Come out to our first event in 2019 on January 23 from 5:30-7pm!&lt;/p&gt;
+&lt;p&gt;We will discuss really useful R packages that can be used to scrape data from the web by walking through some vignettes and tutorials. We plan to focus on &lt;a href=&#34;https://cran.r-project.org/web/packages/rvest/README.html&#34;&gt;rvest&lt;/a&gt;. From the CRAN website it says &lt;em&gt;“rvest helps you scrape information from web pages. It is designed to work with &lt;a href=&#34;https://github.com/tidyverse/magrittr&#34;&gt;magrittr&lt;/a&gt; to make it easy to express common web scraping tasks, inspired by libraries like &lt;a href=&#34;https://pypi.org/project/beautifulsoup4/&#34;&gt;beautifulsoup&lt;/a&gt;.”&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254235977/&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
 &lt;p&gt;Date: Wednesday, January 16, 2019&lt;/p&gt;
-&lt;p&gt;Time: 5:30pm&lt;/p&gt;
-&lt;p&gt;Speakers: XX and ZZ.&lt;/p&gt;
-&lt;p&gt;Host: &lt;a href=&#34;you.com&#34;&gt;WW&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Time: 5:30-7pm&lt;/p&gt;
+&lt;p&gt;Speakers: Coming soon!&lt;/p&gt;
+&lt;p&gt;Host: Stephanie Hicks and Margaret Taub&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Using R in Industry</title>
-      <link>/post/2018-10-04-using-r-in-industry/</link>
+      <title>Holiday Designs in R and Using R in Industry</title>
+      <link>/post/using-r-in-industry/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018-10-04-using-r-in-industry/</guid>
+      <guid>/post/using-r-in-industry/</guid>
       <description>
 
 
-&lt;p&gt;Come out to our November event to hear talks from three great R Ladies!&lt;/p&gt;
-&lt;p&gt;This meeting will highlight local Baltimore R-Ladies analyzing data in industry. It will include presentations from three speakers to discuss how they use R in their jobs and examples of projects they work on!&lt;/p&gt;
+&lt;p&gt;Come out to our November 14th event to create your own holiday design in R to send to your friends and families this holiday season to hear a great talk!&lt;/p&gt;
+&lt;p&gt;This meeting will include a group coding event (we’re making holiday cards! :D ) and a presentation from a &lt;a href=&#34;http://underthecurve.github.io/bylines/&#34;&gt;Christine Zhang&lt;/a&gt; who works as a Data Journalist at the &lt;a href=&#34;https://twitter.com/baltimoresun&#34;&gt;Baltimore Sun&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/baltsundata&#34;&gt;Baltimore Sun Data Visualization team&lt;/a&gt; to discuss how she uses R in her jobs and examples of projects she works on!&lt;/p&gt;
 &lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254235117/&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details on the location&lt;/strong&gt;:&lt;/p&gt;
 &lt;p&gt;Date: Wednesday, November 14, 2018&lt;/p&gt;
-&lt;p&gt;Time: 12:00pm&lt;/p&gt;
-&lt;p&gt;Speakers: Coming soon!&lt;/p&gt;
-&lt;p&gt;Host: Coming soon!&lt;/p&gt;
+&lt;p&gt;Time: 12:00-1:30pm&lt;/p&gt;
+&lt;p&gt;Location:
+Johns Hopkins School of Public Health
+615 N. Wolfe Street
+Baltimore, MD 21205
+(Room W3008 – 3rd floor)&lt;/p&gt;
 </description>
     </item>
     

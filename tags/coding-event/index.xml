@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>talk on R-Ladies Baltimore</title>
-    <link>/categories/talk/</link>
-    <description>Recent content in talk on R-Ladies Baltimore</description>
+    <title>coding-event on R-Ladies Baltimore</title>
+    <link>/tags/coding-event/</link>
+    <description>Recent content in coding-event on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
     <lastBuildDate>Thu, 04 Oct 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://rladies-baltimore.github.io/categories/talk/" rel="self" type="application/rss+xml" />
+    <atom:link href="http://rladies-baltimore.github.io/tags/coding-event/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Holiday Designs in R and Using R in Industry</title>

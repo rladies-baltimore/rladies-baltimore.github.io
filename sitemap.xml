@@ -5,14 +5,14 @@
     <url>
     
       <loc>/post/r-packages-for-scraping-data-from-the-web/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/post/2018-10-04-using-r-in-industry/</loc>
+      <loc>/post/using-r-in-industry/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -77,8 +77,26 @@
     
     <url>
     
+      <loc>/tags/coding-event/</loc>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/categories/coding-event/</loc>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/tags/event/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -87,7 +105,7 @@
     <url>
     
       <loc>/categories/event/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -96,7 +114,7 @@
     <url>
     
       <loc>/tags/talk/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -105,7 +123,25 @@
     <url>
     
       <loc>/categories/talk/</loc>
-      <lastmod>2018-10-05T00:00:00+00:00</lastmod>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/vignette/</loc>
+      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/categories/vignette/</loc>
+      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
