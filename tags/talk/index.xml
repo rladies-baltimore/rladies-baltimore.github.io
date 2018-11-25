@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>talk on R-Ladies Baltimore</title>
-    <link>http://rladies-baltimore.github.io/tags/talk/</link>
+    <link>/tags/talk/</link>
     <description>Recent content in talk on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Holiday Designs in R and Using R in Industry</title>
-      <link>http://rladies-baltimore.github.io/post/using-r-in-industry/</link>
+      <link>/post/using-r-in-industry/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://rladies-baltimore.github.io/post/using-r-in-industry/</guid>
+      <guid>/post/using-r-in-industry/</guid>
       <description>
 
 

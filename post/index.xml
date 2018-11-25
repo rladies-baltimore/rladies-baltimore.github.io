@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on R-Ladies Baltimore</title>
-    <link>http://rladies-baltimore.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,11 +11,30 @@
     <atom:link href="http://rladies-baltimore.github.io/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>R packages for scraping data from the web</title>
+      <link>/post/r-packages-for-scraping-data-from-the-web/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/r-packages-for-scraping-data-from-the-web/</guid>
+      <description>
+
+
+&lt;p&gt;Come out to our first event in 2019 on January 23 from 5:30-7pm!&lt;/p&gt;
+&lt;p&gt;We will discuss really useful R packages that can be used to scrape data from the web by walking through some vignettes and tutorials. We plan to focus on &lt;a href=&#34;https://cran.r-project.org/web/packages/rvest/README.html&#34;&gt;rvest&lt;/a&gt;. From the CRAN website it says &lt;em&gt;“rvest helps you scrape information from web pages. It is designed to work with &lt;a href=&#34;https://github.com/tidyverse/magrittr&#34;&gt;magrittr&lt;/a&gt; to make it easy to express common web scraping tasks, inspired by libraries like &lt;a href=&#34;https://pypi.org/project/beautifulsoup4/&#34;&gt;beautifulsoup&lt;/a&gt;.”&lt;/em&gt; If you don’t know what any of that means, no worries! We’ll explain the basics and hopefully get you off and running towards scraping data for your own projects!&lt;/p&gt;
+&lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254235977/&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
+&lt;p&gt;Date: Wednesday, January 23, 2019&lt;/p&gt;
+&lt;p&gt;Time: 5:30-7pm&lt;/p&gt;
+&lt;p&gt;Speakers: Coming soon!&lt;/p&gt;
+&lt;p&gt;Host: Stephanie Hicks and Margaret Taub&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Making Holiday Cards in R 2018</title>
-      <link>http://rladies-baltimore.github.io/post/making-holiday-cards-in-r-2018/</link>
+      <link>/post/making-holiday-cards-in-r-2018/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://rladies-baltimore.github.io/post/making-holiday-cards-in-r-2018/</guid>
+      <guid>/post/making-holiday-cards-in-r-2018/</guid>
       <description>
 
 
@@ -35,7 +54,7 @@ h[sample(N,N/5)] &amp;lt;- 0
 plot((-2)^as.complex(seq(1,49,len=100)^0.5),
         pch=21,bg=h,xlab=&amp;quot;&amp;quot;, ylab=&amp;quot;&amp;quot;, xaxt=&amp;quot;n&amp;quot;,yaxt=&amp;quot;n&amp;quot;, cex=1.5)
 text(-25,50,&amp;quot;Happy Holidays!&amp;quot;,cex=2,col=ifelse(h%%2,&amp;quot;white&amp;quot;,&amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://rladies-baltimore.github.io/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.r-bloggers.com/make-a-christmas-tree-in-r-with-random-ornamentspresents/&#34;&gt;Make a Christmas Tree in R with random ornaments/presents&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -63,7 +82,7 @@ for(i in 1:10){
   rect(xPres[i]-xWidth[i],0,xPres[i]+xWidth[i],xHeight[i],col=sample(c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;),size=1))
   rect(xPres[i]-0.2*xWidth[i],0,xPres[i]+0.2*xWidth[i],xHeight[i],col=sample(c(&amp;quot;gold&amp;quot;,&amp;quot;grey87&amp;quot;),size=1))
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;http://rladies-baltimore.github.io/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;goal-for-the-next-hour&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Goal for the next hour&lt;/h1&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -83,10 +102,10 @@ through how they created it.&lt;/p&gt;
     
     <item>
       <title>Holiday Designs in R and Using R in Industry</title>
-      <link>http://rladies-baltimore.github.io/post/using-r-in-industry/</link>
+      <link>/post/using-r-in-industry/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://rladies-baltimore.github.io/post/using-r-in-industry/</guid>
+      <guid>/post/using-r-in-industry/</guid>
       <description>
 
 
