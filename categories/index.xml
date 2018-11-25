@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on R-Ladies Baltimore</title>
-    <link>/categories/</link>
+    <link>http://rladies-baltimore.github.io/categories/</link>
     <description>Recent content in Categories on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,46 +11,37 @@
     
     <item>
       <title>blog</title>
-      <link>/categories/blog/</link>
+      <link>http://rladies-baltimore.github.io/categories/blog/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/blog/</guid>
+      <guid>http://rladies-baltimore.github.io/categories/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>coding-event</title>
-      <link>/categories/coding-event/</link>
+      <link>http://rladies-baltimore.github.io/categories/coding-event/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/coding-event/</guid>
+      <guid>http://rladies-baltimore.github.io/categories/coding-event/</guid>
       <description></description>
     </item>
     
     <item>
       <title>event</title>
-      <link>/categories/event/</link>
-      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      <link>http://rladies-baltimore.github.io/categories/event/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/event/</guid>
+      <guid>http://rladies-baltimore.github.io/categories/event/</guid>
       <description></description>
     </item>
     
     <item>
       <title>talk</title>
-      <link>/categories/talk/</link>
+      <link>http://rladies-baltimore.github.io/categories/talk/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/talk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vignette</title>
-      <link>/categories/vignette/</link>
-      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/vignette/</guid>
+      <guid>http://rladies-baltimore.github.io/categories/talk/</guid>
       <description></description>
     </item>
     

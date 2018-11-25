@@ -4,15 +4,7 @@
     
     <url>
     
-      <loc>/post/r-packages-for-scraping-data-from-the-web/</loc>
-      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/post/making-holiday-cards-in-r-2018/</loc>
+      <loc>http://rladies-baltimore.github.io/post/making-holiday-cards-in-r-2018/</loc>
       <lastmod>2018-11-14T00:00:00+00:00</lastmod>
     </url>
     
@@ -20,7 +12,7 @@
     
     <url>
     
-      <loc>/post/using-r-in-industry/</loc>
+      <loc>http://rladies-baltimore.github.io/post/using-r-in-industry/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
     </url>
     
@@ -28,7 +20,7 @@
     
     <url>
     
-      <loc>/post/</loc>
+      <loc>http://rladies-baltimore.github.io/post/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
     
@@ -36,7 +28,7 @@
     
     <url>
     
-      <loc>/publication/</loc>
+      <loc>http://rladies-baltimore.github.io/publication/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
     
@@ -44,7 +36,7 @@
     
     <url>
     
-      <loc>/talk/</loc>
+      <loc>http://rladies-baltimore.github.io/talk/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
     
@@ -52,7 +44,7 @@
     
     <url>
     
-      <loc>/categories/</loc>
+      <loc>http://rladies-baltimore.github.io/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -60,7 +52,7 @@
     
     <url>
     
-      <loc>/publication_types/</loc>
+      <loc>http://rladies-baltimore.github.io/publication_types/</loc>
       <priority>0</priority>
     </url>
     
@@ -68,7 +60,7 @@
     
     <url>
     
-      <loc>/</loc>
+      <loc>http://rladies-baltimore.github.io/</loc>
       <lastmod>2016-04-20T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
@@ -77,7 +69,7 @@
     
     <url>
     
-      <loc>/tags/</loc>
+      <loc>http://rladies-baltimore.github.io/tags/</loc>
       <priority>0</priority>
     </url>
     
@@ -85,7 +77,7 @@
     
     <url>
     
-      <loc>/tags/blog/</loc>
+      <loc>http://rladies-baltimore.github.io/tags/blog/</loc>
       <lastmod>2018-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -94,7 +86,7 @@
     
     <url>
     
-      <loc>/categories/blog/</loc>
+      <loc>http://rladies-baltimore.github.io/categories/blog/</loc>
       <lastmod>2018-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -103,7 +95,7 @@
     
     <url>
     
-      <loc>/tags/coding-event/</loc>
+      <loc>http://rladies-baltimore.github.io/tags/coding-event/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -112,7 +104,7 @@
     
     <url>
     
-      <loc>/categories/coding-event/</loc>
+      <loc>http://rladies-baltimore.github.io/categories/coding-event/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -121,25 +113,7 @@
     
     <url>
     
-      <loc>/tags/event/</loc>
-      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/categories/event/</loc>
-      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/talk/</loc>
+      <loc>http://rladies-baltimore.github.io/tags/event/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -148,7 +122,7 @@
     
     <url>
     
-      <loc>/categories/talk/</loc>
+      <loc>http://rladies-baltimore.github.io/categories/event/</loc>
       <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -157,8 +131,8 @@
     
     <url>
     
-      <loc>/tags/vignette/</loc>
-      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
+      <loc>http://rladies-baltimore.github.io/tags/talk/</loc>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -166,8 +140,8 @@
     
     <url>
     
-      <loc>/categories/vignette/</loc>
-      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
+      <loc>http://rladies-baltimore.github.io/categories/talk/</loc>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

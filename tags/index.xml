@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on R-Ladies Baltimore</title>
-    <link>/tags/</link>
+    <link>http://rladies-baltimore.github.io/tags/</link>
     <description>Recent content in Tags on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,46 +11,37 @@
     
     <item>
       <title>blog</title>
-      <link>/tags/blog/</link>
+      <link>http://rladies-baltimore.github.io/tags/blog/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blog/</guid>
+      <guid>http://rladies-baltimore.github.io/tags/blog/</guid>
       <description></description>
     </item>
     
     <item>
       <title>coding-event</title>
-      <link>/tags/coding-event/</link>
+      <link>http://rladies-baltimore.github.io/tags/coding-event/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/coding-event/</guid>
+      <guid>http://rladies-baltimore.github.io/tags/coding-event/</guid>
       <description></description>
     </item>
     
     <item>
       <title>event</title>
-      <link>/tags/event/</link>
-      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      <link>http://rladies-baltimore.github.io/tags/event/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/event/</guid>
+      <guid>http://rladies-baltimore.github.io/tags/event/</guid>
       <description></description>
     </item>
     
     <item>
       <title>talk</title>
-      <link>/tags/talk/</link>
+      <link>http://rladies-baltimore.github.io/tags/talk/</link>
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/talk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vignette</title>
-      <link>/tags/vignette/</link>
-      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/vignette/</guid>
+      <guid>http://rladies-baltimore.github.io/tags/talk/</guid>
       <description></description>
     </item>
     
