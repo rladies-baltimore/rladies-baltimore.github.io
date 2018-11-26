@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog on R-Ladies Baltimore</title>
-    <link>/categories/blog/</link>
+    <link>http://rladies-baltimore.github.io/categories/blog/</link>
     <description>Recent content in blog on R-Ladies Baltimore</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Making Holiday Cards in R 2018</title>
-      <link>/post/making-holiday-cards-in-r-2018/</link>
+      <link>http://rladies-baltimore.github.io/post/making-holiday-cards-in-r-2018/</link>
       <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/making-holiday-cards-in-r-2018/</guid>
+      <guid>http://rladies-baltimore.github.io/post/making-holiday-cards-in-r-2018/</guid>
       <description>
 
 
@@ -35,7 +35,7 @@ h[sample(N,N/5)] &amp;lt;- 0
 plot((-2)^as.complex(seq(1,49,len=100)^0.5),
         pch=21,bg=h,xlab=&amp;quot;&amp;quot;, ylab=&amp;quot;&amp;quot;, xaxt=&amp;quot;n&amp;quot;,yaxt=&amp;quot;n&amp;quot;, cex=1.5)
 text(-25,50,&amp;quot;Happy Holidays!&amp;quot;,cex=2,col=ifelse(h%%2,&amp;quot;white&amp;quot;,&amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://rladies-baltimore.github.io/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.r-bloggers.com/make-a-christmas-tree-in-r-with-random-ornamentspresents/&#34;&gt;Make a Christmas Tree in R with random ornaments/presents&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -63,7 +63,7 @@ for(i in 1:10){
   rect(xPres[i]-xWidth[i],0,xPres[i]+xWidth[i],xHeight[i],col=sample(c(&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;),size=1))
   rect(xPres[i]-0.2*xWidth[i],0,xPres[i]+0.2*xWidth[i],xHeight[i],col=sample(c(&amp;quot;gold&amp;quot;,&amp;quot;grey87&amp;quot;),size=1))
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://rladies-baltimore.github.io/post/2018-11-14-making-holiday-cards-in-r-2018_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;goal-for-the-next-hour&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Goal for the next hour&lt;/h1&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
