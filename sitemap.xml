@@ -29,7 +29,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
     
   
@@ -37,7 +37,7 @@
     <url>
     
       <loc>/publication/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
     
   
@@ -45,7 +45,7 @@
     <url>
     
       <loc>/talk/</loc>
-      <lastmod>2017-01-01T00:00:00+11:00</lastmod>
+      <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
     
   
@@ -69,7 +69,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2016-04-20T00:00:00+10:00</lastmod>
+      <lastmod>2016-04-20T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -78,15 +78,6 @@
     <url>
     
       <loc>/tags/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/categories/blog/</loc>
-      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -103,8 +94,8 @@
     
     <url>
     
-      <loc>/categories/coding-event/</loc>
-      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <loc>/categories/blog/</loc>
+      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -121,8 +112,8 @@
     
     <url>
     
-      <loc>/categories/event/</loc>
-      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
+      <loc>/categories/coding-event/</loc>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -139,7 +130,7 @@
     
     <url>
     
-      <loc>/categories/talk/</loc>
+      <loc>/categories/event/</loc>
       <lastmod>2019-01-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -157,7 +148,7 @@
     
     <url>
     
-      <loc>/categories/vignette/</loc>
+      <loc>/categories/talk/</loc>
       <lastmod>2019-01-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -167,6 +158,15 @@
     <url>
     
       <loc>/tags/vignette/</loc>
+      <lastmod>2019-01-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/categories/vignette/</loc>
       <lastmod>2019-01-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
