@@ -7,8 +7,53 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
-    <lastBuildDate>Wed, 23 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://rladies-baltimore.github.io/categories/talk/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tidyverse and beyond!</title>
+      <link>/post/tidyverse-and-beyond/</link>
+      <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tidyverse-and-beyond/</guid>
+      <description>&lt;p&gt;Come out to our second event in 2019 on March 13 from 12-1:20pm!&lt;/p&gt;
+
+&lt;p&gt;WHO is this for?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you are new to R &amp;amp; are short-budgeted on time!&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;d like to start working with data in R without learning all the programming details first!!&lt;/li&gt;
+&lt;li&gt;If you have a neat data set you&amp;rsquo;d like to explore and visualize!&lt;/li&gt;
+&lt;li&gt;If you are a current R user but only familiar w/ base R!&lt;/li&gt;
+&lt;li&gt;If you are unfamiliar with pipes&lt;/li&gt;
+&lt;li&gt;If you have heard of tidyverse/dplyr/tidyr/tibble/ggplot but haven&amp;rsquo;t had the chance to get started!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;If any/all of this is true, this event might be for you!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;WHAT we are planning!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;basics of tidyverse &amp;amp; ’tidy data’&lt;/li&gt;
+&lt;li&gt;reshaping data with tidyr: gather, spread, separate, unite&lt;/li&gt;
+&lt;li&gt;exploring data with dplyr: filter, select, mutate, transmute, arrange, summarise, group_by&lt;/li&gt;
+&lt;li&gt;how tidy data talks to ggplot&lt;/li&gt;
+&lt;li&gt;a quick summary of ggplot2&lt;/li&gt;
+&lt;li&gt;finally, publication quality figures with R!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;AGENDA&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;12:00–12:15 Meet &amp;amp; Greet | Set-up&lt;/li&gt;
+&lt;li&gt;12:15–12:25 Who we are | Announcements | What&amp;rsquo;s next&lt;/li&gt;
+&lt;li&gt;12:25–1:10 Workshop: Intro to Tidy Data with R&lt;/li&gt;
+&lt;li&gt;1:10–1:20 Any more Questions? How to reach us to continue this conversation!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254236037/&#34; target=&#34;_blank&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>R packages for scraping data from the web</title>
