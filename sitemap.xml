@@ -93,15 +93,6 @@
     
     <url>
     
-      <loc>/tags/blog/</loc>
-      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/categories/blog/</loc>
       <lastmod>2018-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -111,8 +102,8 @@
     
     <url>
     
-      <loc>/tags/coding-event/</loc>
-      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
+      <loc>/tags/blog/</loc>
+      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -129,8 +120,8 @@
     
     <url>
     
-      <loc>/tags/event/</loc>
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      <loc>/tags/coding-event/</loc>
+      <lastmod>2018-10-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -147,7 +138,7 @@
     
     <url>
     
-      <loc>/tags/talk/</loc>
+      <loc>/tags/event/</loc>
       <lastmod>2019-03-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -165,7 +156,7 @@
     
     <url>
     
-      <loc>/tags/vignette/</loc>
+      <loc>/tags/talk/</loc>
       <lastmod>2019-03-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -175,6 +166,15 @@
     <url>
     
       <loc>/categories/vignette/</loc>
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/vignette/</loc>
       <lastmod>2019-03-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
