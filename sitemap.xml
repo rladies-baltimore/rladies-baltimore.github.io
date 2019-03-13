@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>/post/2019-03-introduction-to-tidyverse/</loc>
+      <lastmod>2019-03-13T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/tidyverse-and-beyond/</loc>
       <lastmod>2019-03-07T00:00:00+00:00</lastmod>
     </url>
@@ -94,7 +102,7 @@
     <url>
     
       <loc>/categories/blog/</loc>
-      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -103,7 +111,7 @@
     <url>
     
       <loc>/tags/blog/</loc>
-      <lastmod>2018-11-14T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
