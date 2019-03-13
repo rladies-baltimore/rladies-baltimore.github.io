@@ -701,6 +701,14 @@ gapminder %&amp;gt;%
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf&#34;&gt;Data Visualization with ggplot2 from RStudio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div id=&#34;confessions-and-countermeasures-with-the-tidyverse&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Confessions and countermeasures with the &lt;code&gt;tidyverse&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Here are the awesome &lt;a href=&#34;../../slides/2019-03-13-tidyverse-confessions.pdf&#34;&gt;slides&lt;/a&gt; from
+Rachael Workman (PhD student in
+&lt;a href=&#34;http://bcmb.bs.jhmi.edu&#34;&gt;Biochemistry, Cellular and Molecular Biology&lt;/a&gt; (BCMB) program)
+where she discusses&lt;br /&gt;
+&lt;em&gt;Confessions and Countermeasures: my not ideal R habits and how the Tidyverse resolved them&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
