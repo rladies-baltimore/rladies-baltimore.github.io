@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>/post/developing-r-packages/</loc>
+      <lastmod>2019-05-14T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/2019-03-introduction-to-tidyverse/</loc>
       <lastmod>2019-03-13T00:00:00+00:00</lastmod>
     </url>
@@ -138,7 +146,7 @@
     <url>
     
       <loc>/tags/event/</loc>
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -147,7 +155,7 @@
     <url>
     
       <loc>/categories/event/</loc>
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -156,7 +164,7 @@
     <url>
     
       <loc>/tags/talk/</loc>
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -165,7 +173,7 @@
     <url>
     
       <loc>/categories/talk/</loc>
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-14T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

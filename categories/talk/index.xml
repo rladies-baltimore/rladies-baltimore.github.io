@@ -7,8 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
-    <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 May 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://rladies-baltimore.github.io/categories/talk/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Developing R Packages</title>
+      <link>/post/developing-r-packages/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/developing-r-packages/</guid>
+      <description>&lt;p&gt;Come out to our third event in 2019 on May 22nd from 5:30-7pm!&lt;/p&gt;
+
+&lt;p&gt;WHO is this for?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you are new to R &amp;amp; are short-budgeted on time!&lt;/li&gt;
+&lt;li&gt;If you have R code that you want to convert into an R package, but don&amp;rsquo;t know how!&lt;/li&gt;
+&lt;li&gt;If you want to learn about how others create R packages!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;If any/all of this is true, this event might be for you!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;WHAT we are planning!&lt;/p&gt;
+
+&lt;p&gt;Genevieve Stein-O’Brien (&lt;a href=&#34;https://twitter.com/genesofeve&#34; target=&#34;_blank&#34;&gt;https://twitter.com/genesofeve&lt;/a&gt;) will introduce
+the basics of R packages and teach how to develop your own R package.
+We will also have an additional speaker sharing some tips on things to
+avoid and suggestions on tutorials that are helpful!&lt;/p&gt;
+
+&lt;p&gt;AGENDA&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;5:30–5:45 Meet &amp;amp; Greet | Set-up&lt;/li&gt;
+&lt;li&gt;5:45–5:50 Who we are | Announcements | What&amp;rsquo;s next&lt;/li&gt;
+&lt;li&gt;5:50–6:30 Workshop: Developing R packages&lt;/li&gt;
+&lt;li&gt;6:30–6:45 Discussion with audience on other questions / resources&lt;/li&gt;
+&lt;li&gt;6:45–7:00 Any more Qs? How to reach us to continue this conversation!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Visit our &lt;a href=&#34;https://www.meetup.com/rladies-baltimore/events/254236074/&#34; target=&#34;_blank&#34;&gt;Meetup&lt;/a&gt; page for more details and to RSVP.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Tidyverse and beyond!</title>
