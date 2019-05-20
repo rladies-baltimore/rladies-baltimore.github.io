@@ -7,8 +7,295 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0.</copyright>
-    <lastBuildDate>Wed, 13 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://rladies-baltimore.github.io/categories/blog/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Introduction to R Package Development 2019</title>
+      <link>/post/introduction-to-r-package-development-2019/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/introduction-to-r-package-development-2019/</guid>
+      <description>
+
+
+&lt;div id=&#34;motivation&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Motivation&lt;/h1&gt;
+&lt;p&gt;In this tutorial, you are going to create your
+own package using the &lt;code&gt;usethis&lt;/code&gt; workflow R package.
+For our purposes, we are using the code provide on the
+&lt;a href=&#34;https://usethis.r-lib.org&#34;&gt;&lt;code&gt;usethis&lt;/code&gt;&lt;/a&gt; website and the
+&lt;a href=&#34;https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/&#34;&gt;blog from Emil Hvitfeldt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This package is great because it automates repetitive tasks that
+arise during project setup and development, both for
+R packages and non-package projects.&lt;/p&gt;
+&lt;div id=&#34;getting-started-with-the-usethis-package&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Getting started with the &lt;code&gt;usethis&lt;/code&gt; package&lt;/h2&gt;
+&lt;div id=&#34;installation&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;Install the released version of &lt;code&gt;usethis&lt;/code&gt; from CRAN:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;usethis&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or install the development version from GitHub with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
+devtools::install_github(&amp;quot;r-lib/usethis&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You may also need these packages:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;testthat&amp;quot;)
+install.packages(&amp;quot;spelling&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-your-r-package-using-usethis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Creating your R package using &lt;code&gt;usethis&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Most &lt;code&gt;use_*()&lt;/code&gt; functions operate on the active project:
+literally, a directory on your computer. If you have just
+used &lt;code&gt;usethis&lt;/code&gt; to create a new package or project, that
+will be the active project. Otherwise, &lt;code&gt;usethis&lt;/code&gt; verifies
+that current working directory is or is below a valid
+project directory and that becomes the active project.&lt;/p&gt;
+&lt;p&gt;A few &lt;code&gt;usethis&lt;/code&gt; functions have no strong connections to
+projects and will expect you to provide a path.&lt;/p&gt;
+&lt;p&gt;Below is a quick look at how &lt;code&gt;usethis&lt;/code&gt; can help to set up a
+package. But remember, many &lt;code&gt;usethis&lt;/code&gt; functions are also
+applicable to analytical projects that are not packages.&lt;/p&gt;
+&lt;p&gt;Let’s load the library&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(usethis)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;usethis&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next we create a path to a temporary folder and call the
+package &lt;code&gt;mypkg&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;path &amp;lt;- file.path(tempdir(), &amp;quot;mypkg&amp;quot;)
+path&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T//RtmprEkBDS/mypkg&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, we use the &lt;code&gt;create_package()&lt;/code&gt; function
+to create the skeleton of this package.&lt;/p&gt;
+&lt;div id=&#34;create-the-package&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Create the package&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;create_package(path)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Creating &amp;#39;/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/&amp;#39;
+## ✔ Setting active project to &amp;#39;/private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg&amp;#39;
+## ✔ Creating &amp;#39;R/&amp;#39;
+## ✔ Writing &amp;#39;DESCRIPTION&amp;#39;
+## Package: mypkg
+## Title: What the Package Does (One Line, Title Case)
+## Version: 0.0.0.9000
+## Authors@R (parsed):
+##     * First Last &amp;lt;first.last@example.com&amp;gt; [aut, cre] (&amp;lt;https://orcid.org/YOUR-ORCID-ID&amp;gt;)
+## Description: What the package does (one paragraph).
+## License: What license it uses
+## Encoding: UTF-8
+## LazyData: true
+## ✔ Writing &amp;#39;NAMESPACE&amp;#39;
+## ✔ Setting active project to &amp;#39;&amp;lt;no active project&amp;gt;&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you are inside of RStudio, this will (hopefully)
+open up a new RStudio session. Also, &lt;code&gt;usethis&lt;/code&gt; is
+quite chatty, explaining what it’s doing
+and assigning you tasks. For example,&lt;/p&gt;
+&lt;p&gt;✔ indicates something usethis has done for you.&lt;/p&gt;
+&lt;p&gt;● indicates that you’ll need to do some work yourself.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For this tutorial, we are not in an interactive session&lt;/strong&gt;.
+So we use the &lt;code&gt;proj_activate(path)&lt;/code&gt; function with the
+&lt;code&gt;path&lt;/code&gt; argument to change the working directory to the
+temporary path that we’ve created.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: You only need to run &lt;code&gt;proj_activate(path)&lt;/code&gt;
+if you are not in an interactive session.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;proj_activate(path)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Changing working directory to &amp;#39;/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/&amp;#39;
+## ✔ Setting active project to &amp;#39;/private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;setting-up-gitgithub&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Setting up git/github&lt;/h2&gt;
+&lt;p&gt;We won’t do it here, but you can use the functions
+below to help set link the pakckage to GitHub. If you
+want to explore this, check out
+&lt;a href=&#34;https://github.com/r-lib/usethis/blob/master/vignettes/articles/usethis-setup.Rmd&#34;&gt;Jenny Bryan tutorial on getting setup&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_git()
+use_github()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;one-time-modifications&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;One time modifications&lt;/h2&gt;
+&lt;p&gt;Now that we are up and running there is a bunch of
+things we should do before we start writing code.
+Firstly we will go over all the actions that only
+have to be done once and get those out of the way.&lt;/p&gt;
+&lt;div id=&#34;setting-up-your-license&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Setting up your license&lt;/h3&gt;
+&lt;p&gt;There are several types of licenses you can pick from,
+for example&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_mit_license()
+use_gpl3_license()
+use_apl2_license()
+use_cc0_license()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s select the MIT license&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_mit_license(&amp;quot;Margaret Taub&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Setting License field in DESCRIPTION to &amp;#39;MIT + file LICENSE&amp;#39;
+## ✔ Writing &amp;#39;LICENSE.md&amp;#39;
+## ✔ Adding &amp;#39;^LICENSE\\.md$&amp;#39; to &amp;#39;.Rbuildignore&amp;#39;
+## ✔ Writing &amp;#39;LICENSE&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The choice of license is beyond the scope of the tutorial,
+but we &lt;a href=&#34;http://r-pkgs.had.co.nz/description.html#license&#34;&gt;refer readers here&lt;/a&gt;
+to learn more about types of licenses.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;add-readme.md-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Add README.md files&lt;/h3&gt;
+&lt;p&gt;Now we add the readme files, this is done using
+the &lt;code&gt;use_news_md()&lt;/code&gt; function. This will create a
+readme.md file that you can edit and knit
+as you normally would.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_news_md()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Writing &amp;#39;NEWS.md&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;adding-continuous-integration-optional&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Adding continuous integration (optional)&lt;/h3&gt;
+&lt;p&gt;Next we will setup some continuous integration.
+This is completely optional, but it’s recommended.
+A nice intro to this topic is from
+&lt;a href=&#34;https://juliasilge.com/blog/beginners-guide-to-travis/&#34;&gt;Julia Silge&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a quick summary, we will extract a section from
+her blog post:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“If you have written an R package, you probably have
+gotten into the habit of running R CMD check on a
+(hopefully) regular basis to check for common problems.
+It automatically detects lots of problems that can arise
+that you might not otherwise notice. Also you probably
+have put your package on GitHub, for version control and
+also to be able to share your code with other people and
+track issues and whatnot. The idea behind continuous
+integration is that CI will automatically run R CMD check
+(along with your tests, etc.) every time you push a commit
+to GitHub. You don’t have to remember to do this; CI
+automatically checks the code after every commit. Travis-CI
+is a continuous integration service that builds and tests
+projects that are hosted on GitHub; if your R package is
+open source (i.e., not private), then using Travis-CI is free.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To set up CI, use the following &lt;code&gt;usethis&lt;/code&gt; functions:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_travis()
+use_appveyor()
+use_coverage(type = c(&amp;quot;codecov&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, this is outside the scope of this tutorial, but we
+leave it here for you to explore.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;add-unit-testing&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Add unit testing&lt;/h3&gt;
+&lt;p&gt;You will most likely also want to include
+unit testing, this can be achieved using the
+&lt;a href=&#34;https://cran.r-project.org/package=testthat&#34;&gt;&lt;code&gt;testthat&lt;/code&gt;&lt;/a&gt;
+package. To do this, use the &lt;code&gt;use_testthat()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_testthat()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Adding &amp;#39;testthat&amp;#39; to Suggests field in DESCRIPTION
+## ✔ Creating &amp;#39;tests/testthat/&amp;#39;
+## ✔ Writing &amp;#39;tests/testthat.R&amp;#39;
+## ● Call `use_test()` to initialize a basic test file and open it for editing.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_test(&amp;quot;my-test&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Writing &amp;#39;tests/testthat/test-my-test.R&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;add-spell-check&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Add spell check&lt;/h3&gt;
+&lt;p&gt;Next we will add spell checking to our workflow, this is done with&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;spelling&amp;quot;)
+use_spell_check()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Adding &amp;#39;spelling&amp;#39; to Suggests field in DESCRIPTION
+## ✔ Setting Language field in DESCRIPTION to &amp;#39;en-US&amp;#39;
+## No changes required to /private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/inst/WORDLIST
+## Updated /private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/tests/spelling.R
+## ● Run `devtools::check()` to trigger spell check&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Make sure that the spelling package is installed before running.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;create-data-folder-and-objects&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Create data folder and objects&lt;/h3&gt;
+&lt;p&gt;If you are going to include data in your package, you
+would want to include a data-raw folder where the data
+is created/formatted.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_data_raw()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Creating &amp;#39;data-raw/&amp;#39;
+## ✔ Adding &amp;#39;^data-raw$&amp;#39; to &amp;#39;.Rbuildignore&amp;#39;
+## ✔ Writing &amp;#39;data-raw/DATASET.R&amp;#39;
+## ● Finish the data preparation script in &amp;#39;data-raw/DATASET.R&amp;#39;
+## ● Use `usethis::use_data()` to add prepared data to package&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- 1
+y &amp;lt;- 2
+use_data(x, y)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Creating &amp;#39;data/&amp;#39;
+## ✔ Saving &amp;#39;x&amp;#39;, &amp;#39;y&amp;#39; to &amp;#39;data/x.rda&amp;#39;, &amp;#39;data/y.rda&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;add-news-file&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Add NEWS file&lt;/h3&gt;
+&lt;p&gt;Lastly if you plan on doing a little larger project a
+NEWS file is very handy to keep track on what is
+happening in your package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_news_md()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;add-packages-to-description-file&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Add packages to DESCRIPTION file&lt;/h3&gt;
+&lt;p&gt;You can also add packages to the DESCRIPTION file&lt;/p&gt;
+&lt;p&gt;For example, here we are adding the &lt;code&gt;MASS&lt;/code&gt; package
+to the Suggests description field.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_package(&amp;quot;MASS&amp;quot;, &amp;quot;Suggests&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Adding &amp;#39;MASS&amp;#39; to Suggests field in DESCRIPTION
+## ● Use `requireNamespace(&amp;quot;MASS&amp;quot;, quietly = TRUE)` to test if package is installed
+## ● Then directly refer to functons like `MASS::fun()` (replacing `fun()`).&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_package(&amp;quot;dplyr&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Adding &amp;#39;dplyr&amp;#39; to Imports field in DESCRIPTION
+## ● Refer to functions with `dplyr::fun()`&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;set-up-documentation-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Set up documentation files&lt;/h3&gt;
+&lt;p&gt;We can set up the documention files using Roxygen&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_roxygen_md()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Setting Roxygen field in DESCRIPTION to &amp;#39;list(markdown = TRUE)&amp;#39;
+## ✔ Setting RoxygenNote field in DESCRIPTION to &amp;#39;6.1.1&amp;#39;
+## ● Run `devtools::document()`&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;multiple-time-modifications&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Multiple time modifications&lt;/h2&gt;
+&lt;p&gt;Now that we have setup all the basics,
+the general development can begin.&lt;/p&gt;
+&lt;p&gt;You typical workflow will be repeating the following
+steps in the order that suits your flow&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write some code&lt;/li&gt;
+&lt;li&gt;Restart R Session Cmd+Shift+F10 (Ctrl+Shift+F10 for Windows)&lt;/li&gt;
+&lt;li&gt;Build and Reload Cmd+Shift+B (Ctrl+Shift+B for Windows)&lt;/li&gt;
+&lt;li&gt;Test Package Cmd+Shift+T (Ctrl+Shift+T for Windows)&lt;/li&gt;
+&lt;li&gt;Check Package Cmd+Shift+E (Ctrl+Shift+E for Windows)&lt;/li&gt;
+&lt;li&gt;Document Package Cmd+Shift+D (Ctrl+Shift+D for Windows)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;create-.r-files-and-unit-tests-for-functions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Create &lt;code&gt;.R&lt;/code&gt; files and unit tests for functions&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_r(&amp;quot;function_name&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ● Edit &amp;#39;R/function_name.R&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This function is very important and you will using it a lot,
+not only will it create the files you save your functions
+in, but it will also open the files if they are already
+created, this makes navigating your R files much easier.
+Once you have created your function it is time to add
+some tests! This is done using the &lt;code&gt;use_test()&lt;/code&gt; function,
+and it works much the same way as the &lt;code&gt;use_r()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_test(&amp;quot;function_name&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Writing &amp;#39;tests/testthat/test-function_name.R&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;create-a-vignette&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Create a vignette&lt;/h3&gt;
+&lt;p&gt;An vignette provides a nice piece of documentation once you have added a bunch of capabilities to your package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;use_vignette(&amp;quot;my_cool_vignette&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## ✔ Adding &amp;#39;knitr&amp;#39; to Suggests field in DESCRIPTION
+## ✔ Setting VignetteBuilder field in DESCRIPTION to &amp;#39;knitr&amp;#39;
+## ✔ Adding &amp;#39;inst/doc&amp;#39; to &amp;#39;.gitignore&amp;#39;
+## ✔ Creating &amp;#39;vignettes/&amp;#39;
+## ✔ Adding &amp;#39;*.html&amp;#39;, &amp;#39;*.R&amp;#39; to &amp;#39;vignettes/.gitignore&amp;#39;
+## ✔ Adding &amp;#39;rmarkdown&amp;#39; to Suggests field in DESCRIPTION
+## ✔ Writing &amp;#39;vignettes/my_cool_vignette.Rmd&amp;#39;
+## ● Edit &amp;#39;vignettes/my_cool_vignette.Rmd&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;p&gt;You should be off and running now!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Introduction to tidyverse 2019</title>

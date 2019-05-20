@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>/post/introduction-to-r-package-development-2019/</loc>
+      <lastmod>2019-05-20T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/developing-r-packages/</loc>
       <lastmod>2019-05-14T00:00:00+00:00</lastmod>
     </url>
@@ -110,7 +118,7 @@
     <url>
     
       <loc>/tags/blog/</loc>
-      <lastmod>2019-03-13T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -119,7 +127,7 @@
     <url>
     
       <loc>/categories/blog/</loc>
-      <lastmod>2019-03-13T00:00:00+00:00</lastmod>
+      <lastmod>2019-05-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

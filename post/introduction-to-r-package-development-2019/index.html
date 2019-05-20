@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 2.4.0">
+  <meta name="generator" content="Hugo 0.51" />
+  <meta name="author" content="R-Ladies Baltimore">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="Motivation In this tutorial, you are going to create your own package using the usethis workflow R package. For our purposes, we are using the code provide on the usethis website and the blog from Emil Hvitfeldt.
+This package is great because it automates repetitive tasks that arise during project setup and development, both for R packages and non-package projects.
+Getting started with the usethis package Installation Install the released version of usethis from CRAN:">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/introduction-to-r-package-development-2019/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href=//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono>
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/rladies.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="R-Ladies Baltimore">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="R-Ladies Baltimore">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/introduction-to-r-package-development-2019/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="R-Ladies Baltimore">
+  <meta property="og:url" content="/post/introduction-to-r-package-development-2019/">
+  <meta property="og:title" content="Introduction to R Package Development 2019 | R-Ladies Baltimore">
+  <meta property="og:description" content="Motivation In this tutorial, you are going to create your own package using the usethis workflow R package. For our purposes, we are using the code provide on the usethis website and the blog from Emil Hvitfeldt.
+This package is great because it automates repetitive tasks that arise during project setup and development, both for R packages and non-package projects.
+Getting started with the usethis package Installation Install the released version of usethis from CRAN:">
+  
+  
+    
+  <meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-05-20T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-05-20T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Introduction to R Package Development 2019 | R-Ladies Baltimore</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/"><img src="/img/R-LadiesBaltimore_RBG_online_LogoWithText_Horizontal.png" alt="R-Ladies Baltimore"></a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>About</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts_events">
+            
+            <span>Events</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts_blog">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#coc">
+            
+            <span>Code of conduct</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#board">
+            
+            <span>Board</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Introduction to R Package Development 2019</h1>
+
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="R-Ladies Baltimore">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2019-05-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2019-05-20 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      May 20, 2019
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="R-Ladies Baltimore">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/blog/">blog</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Introduction%20to%20R%20Package%20Development%202019&amp;url=%2fpost%2fintroduction-to-r-package-development-2019%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fintroduction-to-r-package-development-2019%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fintroduction-to-r-package-development-2019%2f&amp;title=Introduction%20to%20R%20Package%20Development%202019"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fintroduction-to-r-package-development-2019%2f&amp;title=Introduction%20to%20R%20Package%20Development%202019"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Introduction%20to%20R%20Package%20Development%202019&amp;body=%2fpost%2fintroduction-to-r-package-development-2019%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="motivation" class="section level1">
+<h1>Motivation</h1>
+<p>In this tutorial, you are going to create your
+own package using the <code>usethis</code> workflow R package.
+For our purposes, we are using the code provide on the
+<a href="https://usethis.r-lib.org"><code>usethis</code></a> website and the
+<a href="https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/">blog from Emil Hvitfeldt</a>.</p>
+<p>This package is great because it automates repetitive tasks that
+arise during project setup and development, both for
+R packages and non-package projects.</p>
+<div id="getting-started-with-the-usethis-package" class="section level2">
+<h2>Getting started with the <code>usethis</code> package</h2>
+<div id="installation" class="section level3">
+<h3>Installation</h3>
+<p>Install the released version of <code>usethis</code> from CRAN:</p>
+<pre class="r"><code>install.packages(&quot;usethis&quot;)</code></pre>
+<p>Or install the development version from GitHub with:</p>
+<pre class="r"><code># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;r-lib/usethis&quot;)</code></pre>
+<p>You may also need these packages:</p>
+<pre class="r"><code>install.packages(&quot;testthat&quot;)
+install.packages(&quot;spelling&quot;)</code></pre>
+</div>
+</div>
+</div>
+<div id="creating-your-r-package-using-usethis" class="section level1">
+<h1>Creating your R package using <code>usethis</code></h1>
+<p>Most <code>use_*()</code> functions operate on the active project:
+literally, a directory on your computer. If you have just
+used <code>usethis</code> to create a new package or project, that
+will be the active project. Otherwise, <code>usethis</code> verifies
+that current working directory is or is below a valid
+project directory and that becomes the active project.</p>
+<p>A few <code>usethis</code> functions have no strong connections to
+projects and will expect you to provide a path.</p>
+<p>Below is a quick look at how <code>usethis</code> can help to set up a
+package. But remember, many <code>usethis</code> functions are also
+applicable to analytical projects that are not packages.</p>
+<p>Let’s load the library</p>
+<pre class="r"><code>library(usethis)</code></pre>
+<pre><code>## Warning: package &#39;usethis&#39; was built under R version 3.5.2</code></pre>
+<p>Next we create a path to a temporary folder and call the
+package <code>mypkg</code>.</p>
+<pre class="r"><code>path &lt;- file.path(tempdir(), &quot;mypkg&quot;)
+path</code></pre>
+<pre><code>## [1] &quot;/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T//RtmprEkBDS/mypkg&quot;</code></pre>
+<p>Then, we use the <code>create_package()</code> function
+to create the skeleton of this package.</p>
+<div id="create-the-package" class="section level2">
+<h2>Create the package</h2>
+<pre class="r"><code>create_package(path)</code></pre>
+<pre><code>## ✔ Creating &#39;/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/&#39;
+## ✔ Setting active project to &#39;/private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg&#39;
+## ✔ Creating &#39;R/&#39;
+## ✔ Writing &#39;DESCRIPTION&#39;
+## Package: mypkg
+## Title: What the Package Does (One Line, Title Case)
+## Version: 0.0.0.9000
+## Authors@R (parsed):
+##     * First Last &lt;first.last@example.com&gt; [aut, cre] (&lt;https://orcid.org/YOUR-ORCID-ID&gt;)
+## Description: What the package does (one paragraph).
+## License: What license it uses
+## Encoding: UTF-8
+## LazyData: true
+## ✔ Writing &#39;NAMESPACE&#39;
+## ✔ Setting active project to &#39;&lt;no active project&gt;&#39;</code></pre>
+<p>If you are inside of RStudio, this will (hopefully)
+open up a new RStudio session. Also, <code>usethis</code> is
+quite chatty, explaining what it’s doing
+and assigning you tasks. For example,</p>
+<p>✔ indicates something usethis has done for you.</p>
+<p>● indicates that you’ll need to do some work yourself.</p>
+<p><strong>For this tutorial, we are not in an interactive session</strong>.
+So we use the <code>proj_activate(path)</code> function with the
+<code>path</code> argument to change the working directory to the
+temporary path that we’ve created.</p>
+<p><strong>NOTE</strong>: You only need to run <code>proj_activate(path)</code>
+if you are not in an interactive session.</p>
+<pre class="r"><code>proj_activate(path)</code></pre>
+<pre><code>## ✔ Changing working directory to &#39;/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/&#39;
+## ✔ Setting active project to &#39;/private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg&#39;</code></pre>
+</div>
+<div id="setting-up-gitgithub" class="section level2">
+<h2>Setting up git/github</h2>
+<p>We won’t do it here, but you can use the functions
+below to help set link the pakckage to GitHub. If you
+want to explore this, check out
+<a href="https://github.com/r-lib/usethis/blob/master/vignettes/articles/usethis-setup.Rmd">Jenny Bryan tutorial on getting setup</a>.</p>
+<pre class="r"><code>use_git()
+use_github()</code></pre>
+</div>
+<div id="one-time-modifications" class="section level2">
+<h2>One time modifications</h2>
+<p>Now that we are up and running there is a bunch of
+things we should do before we start writing code.
+Firstly we will go over all the actions that only
+have to be done once and get those out of the way.</p>
+<div id="setting-up-your-license" class="section level3">
+<h3>Setting up your license</h3>
+<p>There are several types of licenses you can pick from,
+for example</p>
+<pre class="r"><code>use_mit_license()
+use_gpl3_license()
+use_apl2_license()
+use_cc0_license()</code></pre>
+<p>Let’s select the MIT license</p>
+<pre class="r"><code>use_mit_license(&quot;Margaret Taub&quot;)</code></pre>
+<pre><code>## ✔ Setting License field in DESCRIPTION to &#39;MIT + file LICENSE&#39;
+## ✔ Writing &#39;LICENSE.md&#39;
+## ✔ Adding &#39;^LICENSE\\.md$&#39; to &#39;.Rbuildignore&#39;
+## ✔ Writing &#39;LICENSE&#39;</code></pre>
+<p>The choice of license is beyond the scope of the tutorial,
+but we <a href="http://r-pkgs.had.co.nz/description.html#license">refer readers here</a>
+to learn more about types of licenses.</p>
+</div>
+<div id="add-readme.md-files" class="section level3">
+<h3>Add README.md files</h3>
+<p>Now we add the readme files, this is done using
+the <code>use_news_md()</code> function. This will create a
+readme.md file that you can edit and knit
+as you normally would.</p>
+<pre class="r"><code>use_news_md()</code></pre>
+<pre><code>## ✔ Writing &#39;NEWS.md&#39;</code></pre>
+</div>
+<div id="adding-continuous-integration-optional" class="section level3">
+<h3>Adding continuous integration (optional)</h3>
+<p>Next we will setup some continuous integration.
+This is completely optional, but it’s recommended.
+A nice intro to this topic is from
+<a href="https://juliasilge.com/blog/beginners-guide-to-travis/">Julia Silge</a>.</p>
+<p>For a quick summary, we will extract a section from
+her blog post:</p>
+<blockquote>
+<p>“If you have written an R package, you probably have
+gotten into the habit of running R CMD check on a
+(hopefully) regular basis to check for common problems.
+It automatically detects lots of problems that can arise
+that you might not otherwise notice. Also you probably
+have put your package on GitHub, for version control and
+also to be able to share your code with other people and
+track issues and whatnot. The idea behind continuous
+integration is that CI will automatically run R CMD check
+(along with your tests, etc.) every time you push a commit
+to GitHub. You don’t have to remember to do this; CI
+automatically checks the code after every commit. Travis-CI
+is a continuous integration service that builds and tests
+projects that are hosted on GitHub; if your R package is
+open source (i.e., not private), then using Travis-CI is free.”</p>
+</blockquote>
+<p>To set up CI, use the following <code>usethis</code> functions:</p>
+<pre class="r"><code>use_travis()
+use_appveyor()
+use_coverage(type = c(&quot;codecov&quot;))</code></pre>
+<p>Again, this is outside the scope of this tutorial, but we
+leave it here for you to explore.</p>
+</div>
+<div id="add-unit-testing" class="section level3">
+<h3>Add unit testing</h3>
+<p>You will most likely also want to include
+unit testing, this can be achieved using the
+<a href="https://cran.r-project.org/package=testthat"><code>testthat</code></a>
+package. To do this, use the <code>use_testthat()</code> function.</p>
+<pre class="r"><code>use_testthat()</code></pre>
+<pre><code>## ✔ Adding &#39;testthat&#39; to Suggests field in DESCRIPTION
+## ✔ Creating &#39;tests/testthat/&#39;
+## ✔ Writing &#39;tests/testthat.R&#39;
+## ● Call `use_test()` to initialize a basic test file and open it for editing.</code></pre>
+<pre class="r"><code>use_test(&quot;my-test&quot;)</code></pre>
+<pre><code>## ✔ Writing &#39;tests/testthat/test-my-test.R&#39;</code></pre>
+</div>
+<div id="add-spell-check" class="section level3">
+<h3>Add spell check</h3>
+<p>Next we will add spell checking to our workflow, this is done with</p>
+<pre class="r"><code># install.packages(&quot;spelling&quot;)
+use_spell_check()</code></pre>
+<pre><code>## ✔ Adding &#39;spelling&#39; to Suggests field in DESCRIPTION
+## ✔ Setting Language field in DESCRIPTION to &#39;en-US&#39;
+## No changes required to /private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/inst/WORDLIST
+## Updated /private/var/folders/21/z5b4hcf55k346zpf2dpl0gtc0000gn/T/RtmprEkBDS/mypkg/tests/spelling.R
+## ● Run `devtools::check()` to trigger spell check</code></pre>
+<p>Make sure that the spelling package is installed before running.</p>
+</div>
+<div id="create-data-folder-and-objects" class="section level3">
+<h3>Create data folder and objects</h3>
+<p>If you are going to include data in your package, you
+would want to include a data-raw folder where the data
+is created/formatted.</p>
+<pre class="r"><code>use_data_raw()</code></pre>
+<pre><code>## ✔ Creating &#39;data-raw/&#39;
+## ✔ Adding &#39;^data-raw$&#39; to &#39;.Rbuildignore&#39;
+## ✔ Writing &#39;data-raw/DATASET.R&#39;
+## ● Finish the data preparation script in &#39;data-raw/DATASET.R&#39;
+## ● Use `usethis::use_data()` to add prepared data to package</code></pre>
+<pre class="r"><code>x &lt;- 1
+y &lt;- 2
+use_data(x, y)</code></pre>
+<pre><code>## ✔ Creating &#39;data/&#39;
+## ✔ Saving &#39;x&#39;, &#39;y&#39; to &#39;data/x.rda&#39;, &#39;data/y.rda&#39;</code></pre>
+</div>
+<div id="add-news-file" class="section level3">
+<h3>Add NEWS file</h3>
+<p>Lastly if you plan on doing a little larger project a
+NEWS file is very handy to keep track on what is
+happening in your package.</p>
+<pre class="r"><code>use_news_md()</code></pre>
+</div>
+<div id="add-packages-to-description-file" class="section level3">
+<h3>Add packages to DESCRIPTION file</h3>
+<p>You can also add packages to the DESCRIPTION file</p>
+<p>For example, here we are adding the <code>MASS</code> package
+to the Suggests description field.</p>
+<pre class="r"><code>use_package(&quot;MASS&quot;, &quot;Suggests&quot;)</code></pre>
+<pre><code>## ✔ Adding &#39;MASS&#39; to Suggests field in DESCRIPTION
+## ● Use `requireNamespace(&quot;MASS&quot;, quietly = TRUE)` to test if package is installed
+## ● Then directly refer to functons like `MASS::fun()` (replacing `fun()`).</code></pre>
+<pre class="r"><code>use_package(&quot;dplyr&quot;)</code></pre>
+<pre><code>## ✔ Adding &#39;dplyr&#39; to Imports field in DESCRIPTION
+## ● Refer to functions with `dplyr::fun()`</code></pre>
+</div>
+<div id="set-up-documentation-files" class="section level3">
+<h3>Set up documentation files</h3>
+<p>We can set up the documention files using Roxygen</p>
+<pre class="r"><code>use_roxygen_md()</code></pre>
+<pre><code>## ✔ Setting Roxygen field in DESCRIPTION to &#39;list(markdown = TRUE)&#39;
+## ✔ Setting RoxygenNote field in DESCRIPTION to &#39;6.1.1&#39;
+## ● Run `devtools::document()`</code></pre>
+</div>
+</div>
+<div id="multiple-time-modifications" class="section level2">
+<h2>Multiple time modifications</h2>
+<p>Now that we have setup all the basics,
+the general development can begin.</p>
+<p>You typical workflow will be repeating the following
+steps in the order that suits your flow</p>
+<ul>
+<li>Write some code</li>
+<li>Restart R Session Cmd+Shift+F10 (Ctrl+Shift+F10 for Windows)</li>
+<li>Build and Reload Cmd+Shift+B (Ctrl+Shift+B for Windows)</li>
+<li>Test Package Cmd+Shift+T (Ctrl+Shift+T for Windows)</li>
+<li>Check Package Cmd+Shift+E (Ctrl+Shift+E for Windows)</li>
+<li>Document Package Cmd+Shift+D (Ctrl+Shift+D for Windows)</li>
+</ul>
+<div id="create-.r-files-and-unit-tests-for-functions" class="section level3">
+<h3>Create <code>.R</code> files and unit tests for functions</h3>
+<pre class="r"><code>use_r(&quot;function_name&quot;)</code></pre>
+<pre><code>## ● Edit &#39;R/function_name.R&#39;</code></pre>
+<p>This function is very important and you will using it a lot,
+not only will it create the files you save your functions
+in, but it will also open the files if they are already
+created, this makes navigating your R files much easier.
+Once you have created your function it is time to add
+some tests! This is done using the <code>use_test()</code> function,
+and it works much the same way as the <code>use_r()</code>.</p>
+<pre class="r"><code>use_test(&quot;function_name&quot;)</code></pre>
+<pre><code>## ✔ Writing &#39;tests/testthat/test-function_name.R&#39;</code></pre>
+</div>
+<div id="create-a-vignette" class="section level3">
+<h3>Create a vignette</h3>
+<p>An vignette provides a nice piece of documentation once you have added a bunch of capabilities to your package.</p>
+<pre class="r"><code>use_vignette(&quot;my_cool_vignette&quot;)</code></pre>
+<pre><code>## ✔ Adding &#39;knitr&#39; to Suggests field in DESCRIPTION
+## ✔ Setting VignetteBuilder field in DESCRIPTION to &#39;knitr&#39;
+## ✔ Adding &#39;inst/doc&#39; to &#39;.gitignore&#39;
+## ✔ Creating &#39;vignettes/&#39;
+## ✔ Adding &#39;*.html&#39;, &#39;*.R&#39; to &#39;vignettes/.gitignore&#39;
+## ✔ Adding &#39;rmarkdown&#39; to Suggests field in DESCRIPTION
+## ✔ Writing &#39;vignettes/my_cool_vignette.Rmd&#39;
+## ● Edit &#39;vignettes/my_cool_vignette.Rmd&#39;</code></pre>
+</div>
+</div>
+</div>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>You should be off and running now!</p>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/blog/">blog</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/2019-03-introduction-to-tidyverse/">Introduction to tidyverse 2019</a></li>
+        
+        <li><a href="/post/making-holiday-cards-in-r-2018/">Making Holiday Cards in R 2018</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 R-Ladies Baltimore under (CC) BY-NC-SA 4.0. &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/stata.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    <script src="/js/search.js"></script>
+    
+
+    
+    
+
+  </body>
+</html>
+
