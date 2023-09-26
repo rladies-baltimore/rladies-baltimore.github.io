@@ -1,0 +1,554 @@
+---
+title: "Introduction to Tidyverse with penguins"
+author: "Stephanie Hicks"
+date: "2023-09-26"
+categories: [blog, tidyverse]
+format:
+    html:
+        toc: true
+        toc-depth: 3
+---
+
+
+# Motivation
+
+Throughout this section we will be analyzing a dataset about penguins.
+The name of the dataset is `palmerpenguins`, which is available as a CRAN package. 
+
+```{r, out.width = "780px", show=TRUE, fig.align="center", fig.caption = "Palmer penguins", echo=FALSE}
+knitr::include_graphics("figures/lter_penguins.png")
+```
+
+To install the `palmerpenguins` data set
+
+```{r}
+#| eval: false
+install.packages("palmerpenguins")
+```
+
+
+## Loading data into R
+
+```{r, message=FALSE}
+library(palmerpenguins)
+```
+
+## Meet the `penguins` data frame or "tibble"
+
+By loading the `palmerpenguins` package, we now have access to a 
+data frame called `penguins`. Get an overview of this with 
+`str()`, which displays the structure of an object.
+
+```{r}
+str(penguins)
+```
+
+`str()` will provide a sensible description of almost anything and,
+worst case, nothing bad can actually happen. When in doubt, just 
+`str()` some of the recently created objects to get some ideas a
+bout what to do next.
+
+We could print the `penguins` object itself to screen. However, 
+if you have used R before, you might be reluctant to do this, because
+large datasets just fill up your console and provide very little insight.
+
+This is the first big win for **tibbles**. The 
+[`tidyverse`](https://tidyverse.tidyverse.org) offers a special 
+case of R's default data frame: the "tibble", which is a nod to the 
+actual class of these objects, `tbl_df`.
+
+Now we can boldly print `penguins` to screen! It is a 
+tibble (and also a regular data frame) and the `tidyverse`
+provides a nice print method that shows the most important 
+stuff and doesn't fill up your Console.
+
+```{r}
+## see? it's still a regular data frame, but also a tibble
+class(penguins)
+penguins
+```
+
+
+If you are dealing with plain vanilla data frames, you can rein in data frame printing explicitly with `head()` and `tail()`. Or turn it into a tibble with `as_tibble()`!
+
+```{r}
+head(penguins)
+tail(penguins)
+```
+
+More ways to query basic info on a data frame:
+
+```{r}
+names(penguins)
+ncol(penguins)
+length(penguins)
+dim(penguins)
+nrow(penguins)
+```
+
+A statistical overview can be obtained with `summary()`
+
+```{r}
+summary(penguins)
+```
+
+:::{.callout-tip}
+
+# Bill dimensions
+
+The culmen is the upper ridge of a bird’s bill. In the simplified penguins data, culmen length and depth are renamed as variables bill_length_mm and bill_depth_mm to be more intuitive.
+
+For this penguin data, the culmen (bill) length and depth are measured as shown below
+
+```{r, out.width = "780px", show=TRUE, fig.align="center", fig.caption = "Palmer penguins", echo=FALSE}
+knitr::include_graphics("figures/culmen_depth.png")
+```
+
+:::
+
+Although we have not begun our formal coverage of 
+visualization yet, it's so important for data exploration
+dataset that we will make a few figures anyway. 
+Here we use only base R graphics, which are very basic.
+
+```{r first-plots-base-R}
+plot(bill_length_mm ~ flipper_length_mm, penguins)
+plot(bill_depth_mm ~ bill_length_mm, penguins)
+```
+
+
+
+# Welcome to the "Tidyverse"
+
+The [tidyverse](https://www.tidyverse.org) is _"an opinionated 
+collection of R packages designed for data science. All packages 
+share an underlying philosophy and common APIs."_ 
+
+Another way of putting it is that it's a set of packages 
+that are useful specifically for data manipulation, 
+exploration and visualization with a common philosphy. 
+
+## What is this common philosphy? 
+
+The common philosphy is called _"tidy"_ data. It is 
+a standard way of mapping the meaning of a dataset
+to its structure.
+
+In _tidy_ data:
+
+* Each variable forms a column.
+* Each observation forms a row.
+* Each type of observational unit forms a table.
+
+```{r out.width = "95%", echo = FALSE}
+knitr::include_graphics("http://r4ds.had.co.nz/images/tidy-1.png")
+```
+
+Below, we are interested in transformating the table on 
+the right to the the table on the left, which is 
+considered "tidy". 
+
+```{r out.width = "95%", echo = FALSE}
+knitr::include_graphics("http://r4ds.had.co.nz/images/tidy-9.png")
+```
+
+Working with tidy data is useful because it creates a structured way of
+organizing data values within a data set. This makes the data analysis 
+process more efficient and simplifies the development of data analysis tools
+that work together. In this way, you can focus on the problem you are
+investigating, rather than the uninteresting logistics of data.  
+
+## What is in the `tidyverse`? 
+
+We can install and load the set of R packages using 
+`install.packages("tidyverse")` function. 
+
+When we load the tidyverse package using `library(tidyverse)`, 
+there are six core R packages that load:
+
+* [readr](http://readr.tidyverse.org), for data import.
+* [tidyr](http://tidyr.tidyverse.org), for data tidying.
+* [dplyr](http://dplyr.tidyverse.org), for data wrangling.
+* [ggplot2](http://ggplot2.tidyverse.org), for data visualisation.
+* [purrr](http://purrr.tidyverse.org), for functional programming.
+* [tibble](http://tibble.tidyverse.org), for tibbles, a modern re-imagining of data frames.
+
+Here, we load in the tidyverse. 
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+```
+
+Because these packages all share the "tidy" philosophy, 
+the data analysis workflow is easier as you move from 
+package to package. 
+
+Today we will focus on `dplyr` and `ggplot2`, for 
+data wrangling and visualization, but definitely check 
+out the other packages such as `readr`,
+`tidyr`, R packages to import data, 
+to transform data to the "tidy" format. 
+
+
+# Data wrangling 
+
+In the real world, analyzing data rarely involves 
+data that can be easily imported and ready for 
+analysis. According to Wikipedia:
+
+> Data munging or data wrangling is loosely the process 
+of manually converting or mapping data from one "raw" 
+form into another format that allows for more convenient 
+consumption of the data with the help of semi-automated 
+tools.
+
+As you will see in class, one of the most 
+time-consuming aspects of the data analysis 
+process is "data wrangling". This is also 
+is a trendy term for 
+_cleaning up a messy data set_. 
+
+R provides incredibly powerful and flexible language 
+for data wrangling. However, the syntax is somewhat 
+hard to get used to. We will therefore introducing 
+a package that makes the syntax much more like 
+the English language. This package is `dplyr`. 
+
+## The `dplyr` R package
+
+[`dplyr`](http://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html) 
+is a powerful R-package to transform and summarize 
+tabular data with rows and columns. 
+
+The package contains a set of functions 
+(or "verbs") to perform common data manipulation
+operations such as filtering for rows, selecting 
+specific columns, re-ordering rows, adding new 
+columns and summarizing data. 
+
+In addition, `dplyr` contains a useful function to
+perform another common task which is the is the 
+"split-apply-combine" concept.  We will discuss 
+that in a little bit. 
+
+### How does it compare to using base functions R?
+
+If you are familiar with R, you are probably familiar 
+with base R functions such as `split()`, `subset()`, 
+`apply()`, `sapply()`, `lapply()`, `tapply()` and 
+`aggregate()`. Compared to base functions in R, the 
+functions in `dplyr` are easier to work with, are 
+more consistent in the syntax and are targeted for 
+data analysis around data frames instead of just vectors. 
+
+The important `dplyr` verbs to remember are: 
+
+`dplyr` verbs | Description
+--- | ---
+`select()` | select columns 
+`filter()` | filter rows
+`arrange()` | re-order or arrange rows
+`mutate()` | create new columns
+`summarize()` | summarize values
+`group_by()` | allows for group operations in the "split-apply-combine" concept
+
+
+
+## Pipe operator: |>
+
+Before we go any futher, let's introduce the 
+pipe operator: `|>`.
+
+This operator available in base R allows you to pipe the output 
+from one function to the input of another
+function. Instead of nesting functions 
+(reading from the inside to the 
+outside), the idea of of piping is to 
+read the functions from left to right. 
+
+## `dplyr` verbs in action
+
+The two most basic functions are `select()` and 
+`filter()` which selects columns and filters 
+rows, respectively. 
+
+### Selecting columns using `select()`
+
+To select two columns (`species` and `island`), 
+
+```{r}
+penguins |> 
+  select(species, island) 
+```
+
+To select all the columns *except* a 
+specific column, use the "-" (subtraction) operator 
+(also known as negative indexing). 
+
+
+```{r}
+penguins |> 
+    select(-species, -island)
+```
+
+The function `select()` is much more 
+powerful though. To select a range 
+of columns by name, use the ":" (colon) operator
+
+```{r}
+penguins |> 
+  select(bill_length_mm:body_mass_g)
+```
+
+To select all columns that end with the 
+character string "c", use the function `ends_with()`
+
+```{r}
+penguins |> 
+  select(ends_with("mm"))
+```
+
+Some additional options to select columns based 
+on a specific criteria include
+
+1. `starts_with()` = Select columns that start with 
+a character string
+2. `contains()` = Select columns that contain 
+a character string
+3. `matches()` = Select columns that match a 
+regular expression
+4. `one_of()` = Select columns names that are 
+from a group of names
+
+
+### Selecting rows using `filter()`
+
+Let's say we only want the data from a specific species. 
+
+To do this, we can use the `filter()` function 
+to filter the rows for the Adelie species. 
+
+```{r}
+penguins |> 
+  filter(species == "Adelie")
+```
+
+**Note**: you can use the boolean operators 
+(e.g. `>`, `<`, `>=`, `<=`, `!=`, `%in%`) 
+to create logical tests.
+
+For example, if we wanted only species with a bill length of 
+greater than or equal to 40, we can add a second criteria: 
+
+```{r}
+penguins |> 
+  filter(species == "Adelie") |> 
+  filter(bill_length_mm >= 40)
+```
+
+
+### Use `mutate()` to add new variables
+
+`mutate()` is a function that defines and inserts new 
+variables into a tibble. You can refer to existing
+variables by name.
+
+```{r}
+penguins |> 
+  mutate(new_ratio = body_mass_g / bill_length_mm) |> 
+  select(species, island, new_ratio)
+```
+
+
+### Arrange or re-order rows using `arrange()`
+
+To arrange (or re-order) rows by a particular 
+column such as the bill length, list the name of 
+the column you want to arrange the rows by
+
+```{r}
+penguins |> 
+  arrange(bill_length_mm)
+```
+
+If we wanted to arrange in a descending order, we could 
+use the `desc()` function inside of
+`arrange()` to order rows in a descending order. 
+
+```{r}
+penguins |> 
+  arrange(desc(bill_length_mm))
+```
+
+
+# Data visualization 
+
+## ggplot2
+
+[`ggplot2`](http://ggplot2.org) is a powerful data exploration and 
+visualization package that can create graphics in R. It was created by 
+[Hadley Wickham](http://had.co.nz) when he was a graduate student at 
+Iowa State University and is based on the principals defined in the 
+[Grammar of Graphics](http://www.amazon.com/The-Grammar-Graphics-Statistics-Computing/dp/0387245448).  
+
+
+### Why is it useful?
+
+The idea of the Grammar of Graphics is to break the graph into components 
+and handle the components of a graph separately. The `ggplot2` package 
+contains a set of functions that allow us to build the features of the
+graph in a series of layers for versatility and control. 
+
+There are two main plotting functions in `ggplot2`: 
+
+* `qplot()` = a quick plot, similar to the `plot()` function in base R
+* `ggplot()` = a "grammar of graphics" (gg) plot which is made up two 
+components (a `ggplot()` object and at least one `geom` layer)
+
+The `ggplot2` is loaded whenever you load `tidyverse`, but you can 
+always load it formally. 
+
+```{r}
+library(ggplot2)
+```
+
+## Flipper and bill length
+
+Let's make a scatter plot of the flipper and bill length for each penguin. 
+We will first make a quick plot of these two variables. 
+
+#### `qplot`
+
+The `qplot` function  allows us to produce simple plots, similar to 
+`plot` in base R.  The main input of `qplot` is an `x` and `y` argument, 
+but it also accepts a data set (`data`) where the `x` and `y` variables are 
+located.  
+
+:::{.callout-note}
+
+Why does this not work?
+
+```{r}
+#| eval: false
+qplot(x = flipper_length_mm, y = bill_length_mm) 
+```
+
+:::
+
+We need to specify where to get these values from. Instead, we can
+use the vectors of `penguins` directly
+
+```{r}
+## need to specify where variables are located
+qplot(x = penguins$flipper_length_mm, y = penguins$bill_length_mm) 
+```
+
+However, a cleaner way to do this is to use the `data` argument:
+```{r}
+qplot(x = flipper_length_mm, y = bill_length_mm, data = penguins)
+```
+
+
+If youw ant to add labels to the x and y axis, you can use the 
+`xlab` and `ylab` arguments. You can read the help file to 
+check out other arguments available in the function. 
+
+```{r}
+qplot(x = flipper_length_mm, y = bill_length_mm, 
+      data = penguins,
+      xlab = "Flipper length (mm)", 
+      ylab = "Bill length (mm)", 
+      main = "Data from palmerpenguins R package")
+```
+
+From this plot, we see that there is a positive relationship
+between the two variables. However, there seems to groups of 
+penguins. Next, we will learn how to color the points using 
+something called the grammar of graphics and create  
+a series of visualizations.
+
+## The `ggplot()` function
+
+This function is the implementation of the "Grammar of Graphics" 
+that allows us to build layers of graphical elements to produce
+plots. As explained by Hadley Wickham
+
+> the grammar tells us that a statistical graphic is a mapping from data to aesthetic attributes (colour, shape, size) of geometric objects (points, lines, bars). The plot may also contain statistical transformations of the data and is drawn on a specific coordinates system.
+
+#### Terminology 
+
+* **ggplot** - the main function where you specify the data set and variables to plot (this is where we define the `x` and
+`y` variable names)
+* **geoms** - geometric objects
+    * e.g. `geom_point()`, `geom_bar()`, `geom_line()`, `geom_histogram()`
+* **aes** - aesthetics
+    * shape, transparency, color, fill, linetype
+* **scales** - define how your data will be plotted
+    * continuous, discrete, log, etc
+
+There are three ways to initialize a `ggplot()` object. 
+
+An empty ggplot object
+
+```{r}
+ggplot()         
+```
+
+A ggplot object associated with a dataset
+
+```{r}
+penguins |> 
+  ggplot()
+```
+
+or a ggplot object with a dataset and `x` and `y` defined
+
+```{r}
+penguins |> 
+  ggplot(aes(x = flipper_length_mm, y = bill_length_mm))
+```
+
+
+#### Creating your first ggplot()
+
+We just used the function `aes()` which is an aesthetic mapping 
+function inside the `ggplot()` object. We use this function to 
+specify plot attributes (e.g. `x` and `y` variable names) that 
+will not change as we add more layers.  
+
+Anything that goes in the `ggplot()` object becomes
+a global setting.  From there, we use the `geom` objects to add 
+more layers to the base `ggplot()` object. 
+These will define what we are interested in 
+illustrating using the data.  
+
+Earlier we noticed that there was a positive trend between 
+flipper and bill length, but there seemed to be groups of 
+points. Let's examine this plot with a `geom` called 
+`geom_poin()` which is the default when you provide 
+both a `x` and `y` variable in the `aes()` function 
+and add color: 
+
+```{r}
+penguins |> 
+  ggplot(aes(x = flipper_length_mm, y = bill_length_mm)) + 
+  geom_point(aes(color = species))
+```
+
+Now we see there groups of points are different species of penguins. 
+
+We can also do cool things like there where we add a linear regression line 
+over each species of penguin to see the relationship between the two variables. 
+
+```{r}
+penguins |> 
+  ggplot(aes(x = flipper_length_mm, 
+             y = bill_length_mm, 
+             group = species)) + 
+  geom_point(aes(color = species)) + 
+  geom_smooth(method = "lm", se = FALSE, aes(color = species))
+```
+
+
+We hope you enjoyed learning about the Tidyverse, data wrangling, and data visualization using a dataset about penguins! 
