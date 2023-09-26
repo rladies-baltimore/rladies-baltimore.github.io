@@ -1,0 +1,10 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog/introduction-to-r-package-development-2019/index.html",
+      "/blog/2019-03-introduction-to-tidyverse/index.html",
+      "/blog/making-holiday-cards-in-r-2018/index.html"
+    ]
+  }
+]
