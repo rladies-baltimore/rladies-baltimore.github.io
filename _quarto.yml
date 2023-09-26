@@ -16,7 +16,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: pulse
     css: styles.css
 
 editor: visual
