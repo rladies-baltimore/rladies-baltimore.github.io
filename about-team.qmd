@@ -35,7 +35,8 @@ format:
 
 ![](images/rachael_workman.jpeg){.profile-pic}
 
-[**Rachael Workman**](https://www.linkedin.com/in/rachael-workman-a24a2a1a3/) | Add description.
+[**Rachael Workman**](https://www.linkedin.com/in/rachael-workman-a24a2a1a3/) | I am a PhD candidate, soon to be Postdoc, at the Johns Hopkins School of Medicine studying how bacteria protect themselves from viruses. I largely learned R on the job through working in a genomics lab and hacking together scripts best I could, and have loved being a co-organizer of R-ladies since 2018 fortifying my coding experience and meeting such accomplished scientists and programmers.
+
 :::
 
 
