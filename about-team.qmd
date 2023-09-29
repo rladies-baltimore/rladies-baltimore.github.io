@@ -1,0 +1,68 @@
+---
+title: "R-Ladies Baltimore Leadership Team"
+format:
+    html:
+        toc: true
+        toc-depth: 3
+---
+
+## Stephanie Hicks
+
+::: {layout="[21,79]" .profile-header}
+
+![](images/stephanie_hicks.jpg){.profile-pic}
+
+[**Stephanie Hicks**](https://www.stephaniehicks.com). Hello! I work at the intersection of data science and health as an Associate Professor of Biostatistics and Biomedical Engineering at Johns Hopkins University. In 2018, I co-founded R-Ladies Baltimore with [Alexis Norris](https://www.linkedin.com/in/alexisleighnorris) and today I help co-organize R-Ladies Baltimore events! I work to made these spaces more welcoming, diverse, and inclusive. 🌱
+:::
+
+
+## Margaret Taub
+
+::: {layout="[21,79]" .profile-header}
+
+![](images/margaret_taub.png){.profile-pic}
+
+[**Margaret Taub**](https://publichealth.jhu.edu/faculty/2744/margaret-taub). Add description.
+:::
+
+
+## Rachael Workman
+
+::: {layout="[21,79]" .profile-header}
+
+![](images/rachael_workman.jpeg){.profile-pic}
+
+[**Rachel Workman**](https://www.linkedin.com/in/rachael-workman-a24a2a1a3/). Add description.
+:::
+
+
+## Sowmya Parthiban
+
+::: {layout="[21,79]" .profile-header}
+
+![](images/sowmya_parthiban.png){.profile-pic}
+
+[**Sowmya Parthiban**](https://www.sowmya-parthiban.com). Add description.
+:::
+
+
+## Afrooz Razi
+
+::: {layout="[21,79]" .profile-header}
+
+![](images/afrooz_razi.jpeg){.profile-pic}
+
+[**Afrooz Razi**](https://www.linkedin.com/in/afroozrazi). Add description.
+:::
+
+
+## Alyssa Columbus
+
+::: {layout="[21,79]" .profile-header}
+
+![](images/alyssa_columbus.jpeg){.profile-pic}
+
+[**Alyssa Columbus**](https://alyssacolumbus.com). Add description.
+:::
+
+

@@ -9,6 +9,7 @@ website:
         text: Events
       - blog.qmd
       - coc.qmd
+      - about-team.qmd
       - icon: github
         href: https://github.com/rladies-baltimore
       - icon: twitter
