@@ -10,9 +10,10 @@ format:
 
 ::: {layout="[21,79]" .profile-header}
 
-![](images/stephanie_hicks.jpg){.profile-pic}
+![](images/stephanie_c_hicks.jpg){.profile-pic}
 
-[**Stephanie Hicks**](https://www.stephaniehicks.com). Hello! I work at the intersection of data science and health as an Associate Professor of Biostatistics and Biomedical Engineering at Johns Hopkins University. In 2018, I co-founded R-Ladies Baltimore with [Alexis Norris](https://www.linkedin.com/in/alexisleighnorris) and today I help co-organize R-Ladies Baltimore events! I work to made these spaces more welcoming, diverse, and inclusive. 🌱
+[**Stephanie Hicks**](https://www.stephaniehicks.com) | Hello! I work at the intersection of data science and health as an Associate Professor of Biostatistics and Biomedical Engineering at Johns Hopkins University. In 2018, I co-founded R-Ladies Baltimore with [Alexis Norris](https://www.linkedin.com/in/alexisleighnorris) and today I help co-organize R-Ladies Baltimore events! I work to made these spaces more welcoming, diverse, and inclusive. 🌱
+
 :::
 
 
@@ -22,7 +23,9 @@ format:
 
 ![](images/margaret_taub.png){.profile-pic}
 
-[**Margaret Taub**](https://publichealth.jhu.edu/faculty/2744/margaret-taub). Add description.
+[**Margaret Taub**](https://publichealth.jhu.edu/faculty/2744/margaret-taub) | I am an Associate Scientist in the Johns Hopkins Department of Biostatistics where I collaborate with scientists working to understand the genetics and genomics of chronic pain, cardiovascular disease and asthma, among other things. I also teach a large undergraduate biostatistics course, mainly to students studying public health, and a couple of smaller courses on R programming and data analysis. I have been a co-organizer of R-Ladies Baltimore since 2018 and love meeting people from all over the world who share an interest in R!
+
+
 :::
 
 
@@ -32,7 +35,7 @@ format:
 
 ![](images/rachael_workman.jpeg){.profile-pic}
 
-[**Rachel Workman**](https://www.linkedin.com/in/rachael-workman-a24a2a1a3/). Add description.
+[**Rachael Workman**](https://www.linkedin.com/in/rachael-workman-a24a2a1a3/) | Add description.
 :::
 
 
@@ -42,7 +45,7 @@ format:
 
 ![](images/sowmya_parthiban.png){.profile-pic}
 
-[**Sowmya Parthiban**](https://www.sowmya-parthiban.com). Add description.
+[**Sowmya Parthiban**](https://www.sowmya-parthiban.com) | Add description.
 :::
 
 
@@ -52,7 +55,7 @@ format:
 
 ![](images/afrooz_razi.jpeg){.profile-pic}
 
-[**Afrooz Razi**](https://www.linkedin.com/in/afroozrazi). Add description.
+[**Afrooz Razi**](https://www.linkedin.com/in/afroozrazi) | Add description.
 :::
 
 
@@ -62,7 +65,7 @@ format:
 
 ![](images/alyssa_columbus.jpeg){.profile-pic}
 
-[**Alyssa Columbus**](https://alyssacolumbus.com). Add description.
+[**Alyssa Columbus**](https://alyssacolumbus.com) | Add description.
 :::
 
 
