@@ -10,7 +10,7 @@ format:
 
 ::: {layout="[21,79]" .profile-header}
 
-![](images/stephanie_c_hicks.jpg){.profile-pic}
+![](images/stephanie_hicks.png){.profile-pic}
 
 [**Stephanie Hicks**](https://www.stephaniehicks.com) | Hello! I work at the intersection of data science and health as an Associate Professor of Biostatistics and Biomedical Engineering at Johns Hopkins University. In 2018, I co-founded R-Ladies Baltimore with [Alexis Norris](https://www.linkedin.com/in/alexisleighnorris) and today I help co-organize R-Ladies Baltimore events! I work to made these spaces more welcoming, diverse, and inclusive. 🌱
 
@@ -67,7 +67,8 @@ format:
 
 ![](images/alyssa_columbus.jpeg){.profile-pic}
 
-[**Alyssa Columbus**](https://alyssacolumbus.com) | Add description.
+[**Alyssa Columbus**](https://alyssacolumbus.com) | Welcome! I am a PhD Candidate in Biostatistics and Vivien Thomas Scholar at the Johns Hopkins Bloomberg School of Public Health. In 2018, I founded R-Ladies Irvine, and since moving to Baltimore in 2022, I've been a co-organizer of R-Ladies Baltimore. I have a passion for supporting and empowering women with career interests in R programming and data science.
+
 :::
 
 
