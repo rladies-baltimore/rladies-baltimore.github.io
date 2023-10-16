@@ -56,7 +56,7 @@ format:
 
 ![](images/afrooz_razi.jpeg){.profile-pic}
 
-[**Afrooz Razi**](https://www.linkedin.com/in/afroozrazi) | Hi! I am a PhD candidate at the Johns Hopkins School of Medicine. My background is in biology and working in a wet lab. I remember how scary it was to begin learning R programming and to make that big change in my career path. I joined the R-Ladies Baltimore as a co-organizer in 2021 to encourage others who like me are now ready to make a change and learn more about R.
+[**Afrooz Razi**](https://raziafrooz.github.io) | Hi! I am a PhD candidate at the Johns Hopkins School of Medicine. My background is in biology and working in a wet lab. I remember how scary it was to begin learning R programming and to make that big change in my career path. I joined the R-Ladies Baltimore as a co-organizer in 2021 to encourage others who like me are now ready to make a change and learn more about R.
 
 :::
 
