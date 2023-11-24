@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/2023-holiday-dataviz/index.html",
       "/blog/2023-introduction-to-tidyverse/index.html",
       "/blog/introduction-to-r-package-development-2019/index.html",
       "/blog/2019-03-introduction-to-tidyverse/index.html",

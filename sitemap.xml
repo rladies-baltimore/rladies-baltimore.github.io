@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/coc.html</loc>
-    <lastmod>2023-10-16T00:33:24.247Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog/2019-03-introduction-to-tidyverse/index.html</loc>
-    <lastmod>2023-10-16T00:33:23.455Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog/2023-introduction-to-tidyverse/index.html</loc>
-    <lastmod>2023-10-16T00:33:21.379Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/about-team.html</loc>
-    <lastmod>2023-10-16T00:33:19.003Z</lastmod>
+    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/LICENSE.html</loc>
+    <lastmod>2023-11-24T08:14:25.593Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog.html</loc>
-    <lastmod>2023-10-16T00:33:17.719Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/LICENSE.html</loc>
-    <lastmod>2023-10-16T00:33:18.535Z</lastmod>
+    <lastmod>2023-11-24T08:14:25.033Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog/introduction-to-r-package-development-2019/index.html</loc>
-    <lastmod>2023-10-16T00:33:19.967Z</lastmod>
+    <lastmod>2023-11-24T08:14:24.197Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog/2023-holiday-dataviz/index.html</loc>
+    <lastmod>2023-11-24T08:14:22.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog/2023-introduction-to-tidyverse/index.html</loc>
+    <lastmod>2023-11-24T08:14:21.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/coc.html</loc>
+    <lastmod>2023-11-24T08:14:20.321Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog/making-holiday-cards-in-r-2018/index.html</loc>
-    <lastmod>2023-10-16T00:33:22.035Z</lastmod>
+    <lastmod>2023-11-24T08:14:22.069Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/blog/2019-03-introduction-to-tidyverse/index.html</loc>
+    <lastmod>2023-11-24T08:14:23.557Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/index.html</loc>
-    <lastmod>2023-10-16T00:33:23.847Z</lastmod>
+    <lastmod>2023-11-24T08:14:24.473Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/rladies-baltimore/rladies-baltimore.github.io/about-team.html</loc>
+    <lastmod>2023-11-24T08:14:25.349Z</lastmod>
   </url>
 </urlset>
