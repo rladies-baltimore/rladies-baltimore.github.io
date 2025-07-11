@@ -1,1 +1,1 @@
-Sitemap: https://github.com/rladies-baltimore/rladies-baltimore.github.io/sitemap.xml
+Sitemap: https://rladies-baltimore.github.io/sitemap.xml
